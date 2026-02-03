@@ -5,7 +5,6 @@ from torch.autograd import grad
 from utils.util import AverageMeter,get_logger,eval_metrix
 import os
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-# device = 'cpu'
 
 class Sin(nn.Module):
     def __init__(self):
@@ -122,9 +121,7 @@ class LR_Scheduler(object): # 用于调整优化器的学习率
     def get_lr(self):
         return self.current_lr
 
-
-
-class PINN_opt(nn.Module): # 手动调整损失函数权重，0.7,0.2
+class PINN_opt(nn.Module): # 网格搜索优化损失函数的权重，输入神经元数量为17
     def __init__(self,args):
         super(PINN_opt, self).__init__()
         self.args = args
@@ -138,7 +135,7 @@ class PINN_opt(nn.Module): # 手动调整损失函数权重，0.7,0.2
         self.dynamical_F = MLP(input_dim=34,output_dim=1,
                                layers_num=args.F_layers_num,
                                hidden_dim=args.F_hidden_dim,
-                               droupout=0.2).to(device) # 用于计算动态方程的网络
+                               droupout=0.2).to(device) # 用于计算动态方程的网络,这里不是35个输入，不包含u关于t的偏导数
 
         # self.optimizer = torch.optim.Adam(self.parameters(), lr=args.warmup_lr)
         self.optimizer1 = torch.optim.Adam(self.solution_u.parameters(), lr=args.warmup_lr)

@@ -1,29 +1,17 @@
 from dataloader.dataloader import XJTUdata
-from Model.SA_PIKAN import SA_PIKAN
-from Model.PIKAN_AdpBal import PIKAN_AdpBal
-from Model.PIKAN_PCGrad import PIKAN_PCGrad
-from Model.PIKAN_Sum import PIKAN_Sum
-from Model.PIKAN import PIKAN
-from Model.PIMLP_PCGrad import PIMLP_PCGrad
-from Model.PIMLP_Sum import PIMLP_Sum
-from Model.PIMLP import PIMLP
-from Model.PIMLP_v1 import PIMLP_v1
-from Model.PIMultKAN import PIMultKAN
-from Model.PIChebyKAN import PIChebyKAN
 from Model.PIKAN_opt import PIKAN_opt
 from Model.PINN_opt import PINN_opt
 from Model.PIKAN_small import PIKAN_small
 from Model.PIKAN_hgs import PIKAN_hgs
-from Model.VerhulstPIKAN import VerhulstPIKAN
-from Model.VerhulstPINN import VerhulstPINN
 import argparse
 import os
-from assistant import get_gpus_memory_info,set_seed
 import numpy as np
 import torch
-from utils.util import eval_metrix,get_logger
+from utils.util import eval_metrix,get_logger,set_seed
+
+
 def load_data(args,small_sample=None):
-    root = 'data/XJTU data'
+    root = 'Data/XJTU data'
     data = XJTUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -44,46 +32,22 @@ def load_data(args,small_sample=None):
                   'test': test_loader['test_3']}
     return dataloader
 
+
 def load_model(args):
-    if args.model_name == 'SA_PIKAN':
-        model = SA_PIKAN(args)
-    elif args.model_name == 'PIKAN_AdpBal':
-        model = PIKAN_AdpBal(args)
-    elif args.model_name == 'PIKAN_PCGrad':
-        model = PIKAN_PCGrad(args)
-    elif args.model_name == 'PIKAN_Sum':
-        model = PIKAN_Sum(args)
-    elif args.model_name == 'PIKAN':
-        model = PIKAN(args)
-    elif args.model_name == 'PIMLP_PCGrad':
-        model = PIMLP_PCGrad(args)
-    elif args.model_name == 'PIMLP_Sum':
-        model = PIMLP_Sum(args)
-    elif args.model_name == 'PIMLP':
-        model = PIMLP(args)
-    elif args.model_name == 'PIMLP_v1':
-        model = PIMLP_v1(args)
-    elif args.model_name == 'PIMultKAN':
-        model = PIMultKAN(args)
-    elif args.model_name == 'PIChebyKAN':
-        model = PIChebyKAN(args)
+    if args.model_name == 'PINN_opt':
+        model = PINN_opt(args)
     elif args.model_name == 'PIKAN_opt':
         model = PIKAN_opt(args)
-    elif args.model_name == 'PINN_opt':
-        model = PINN_opt(args)
-    elif args.model_name == 'VerhulstPIKAN':
-        model = VerhulstPIKAN(args)
-    elif args.model_name == 'VerhulstPINN':
-        model = VerhulstPINN(args)
     elif args.model_name == 'PIKAN_small':
         model = PIKAN_small(args)
     elif args.model_name == 'PIKAN_hgs':
         model = PIKAN_hgs(args)
     return model
 
+
 def main_2():
     args = get_args()
-    setattr(args,'model_name','PIKAN_small')
+    setattr(args,'model_name','PIKAN_small') # 只运行PIKAN_small
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
     for i in [0]:
         batch = batchs[i]
@@ -136,9 +100,10 @@ def main_2():
             torch.save(best_model,os.path.join(best_save_folder,'best_model.pth'))
             torch.cuda.empty_cache()
 
+
 def main():
     args = get_args()
-    setattr(args,'model_name','PIKAN_hgs')
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
     for i in range(5,6):
         batch = batchs[i]
@@ -191,9 +156,10 @@ def main():
             torch.save(best_model,os.path.join(best_save_folder,'best_model.pth'))
             torch.cuda.empty_cache()
 
+
 def small_sample():
     args = get_args()
-    setattr(args,'model_name','PIKAN_hgs')
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
     for n in [1,2,3,4]:
         for i in [0]:
@@ -248,9 +214,10 @@ def small_sample():
                 torch.save(best_model,os.path.join(best_save_folder,'best_model.pth'))
                 torch.cuda.empty_cache()
 
+
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for XJTU dataset')
-    parser.add_argument('--model_name',type=str,default='PIKAN',choices=['SA_PIKAN','PIKAN_AdpBal','PIKAN_PCGrad','PIMLP_PCGrad','PIKAN_Sum','PIMLP_Sum','PIKAN','PIMLP'])
+    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_hgs'])
     parser.add_argument('--data', type=str, default='XJTU', help='XJTU, HUST, MIT, TJU')
     parser.add_argument('--train_batch', type=int, default=0, choices=[-1,0,1,2,3,4,5],
                         help='如果是-1，读取全部数据，并随机划分训练集和测试集;否则，读取对应的batch数据'
@@ -278,9 +245,6 @@ def get_args():
     parser.add_argument('--F_hidden_dim', type=int, default=60, help='the hidden dim of F')
 
     # loss related
-    parser.add_argument('--lr_cos',type=int,default=0.001,help='lr of cos_sim')
-    parser.add_argument('--lr_w',type=int,default=0.001,help='lr of loss weights')
-    parser.add_argument('--mode',type=str,default='AdpBal',help=['Baseline','Sum','AdpBal'])
     parser.add_argument('--alpha', type=float, default=0.7, help='loss = l_data + alpha * l_PDE + beta * l_physics')
     parser.add_argument('--beta', type=float, default=0.2, help='loss = l_data + alpha * l_PDE + beta * l_physics')
     parser.add_argument('--alpha_values', type=float, default=[0.001, 0.01, 0.1, 1, 10, 100, 1000], help='loss = l_data + alpha * l_PDE + beta * l_physics')   #[0.001, 0.01, 0.1, 1, 10, 100, 1000]

@@ -43,9 +43,7 @@ class LR_Scheduler(object): # 用于调整优化器的学习率
     def get_lr(self):
         return self.current_lr
 
-
-
-class PIKAN_hgs(nn.Module): # 手动调整损失函数权重，0.7,0.2
+class PIKAN_hgs(nn.Module): # 网格搜索优化损失函数的权重，总参数量与PINN模型相当，输入神经元数量为17
     def __init__(self,args):
         super(PIKAN_hgs, self).__init__()
         self.args = args

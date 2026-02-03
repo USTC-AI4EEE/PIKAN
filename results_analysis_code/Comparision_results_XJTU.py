@@ -8,19 +8,16 @@ Parse the results of the comparative experiment
 import pandas as pd
 import numpy as np
 import os
-# from utils.util import eval_metrix
-# import matplotlib.pyplot as plt
-# import scienceplots
-# plt.style.use('science')
-
 from sklearn import metrics
+
+
 def eval_metrix(true_label,pred_label):
     MAE = metrics.mean_absolute_error(true_label,pred_label)
     MAPE = metrics.mean_absolute_percentage_error(true_label,pred_label)
     MSE = metrics.mean_squared_error(true_label,pred_label)
     RMSE = np.sqrt(metrics.mean_squared_error(true_label,pred_label))
-
     return [MAE,MAPE,MSE,RMSE]
+
 
 class Results:
     def __init__(self,root='../results/MLP/XJTU/',gap=0.07):
@@ -67,7 +64,6 @@ class Results:
         train_data_loss = []
         valid_data_loss = []
 
-
         # 第一个iter的损失
         # The loss of the first iter
         for i in range(len(lines)):
@@ -84,19 +80,18 @@ class Results:
 
         data_dict['valid_data_loss'] = valid_data_loss
 
-
         # 解析数据路径
         # Parse the data path
         line1 = lines[1]
         if '.csv' in line1:
             line = line1[1:-2]
-            line_list = line.replace(f'data/{self.dataset} data/', '').replace('.csv','').replace('\'','').split(', ')
+            line_list = line.replace(f'Data/{self.dataset} data/', '').replace('.csv','').replace('\'','').split(', ')
             data_dict['IDs_1'] = line_list
 
         line2 = lines[3]
         if '.csv' in line2:
             line = line2[1:-2]
-            line_list = line.replace(f'data/{self.dataset} data/', '').replace('.csv', '').replace('\'', '').split(', ')
+            line_list = line.replace(f'Data/{self.dataset} data/', '').replace('.csv', '').replace('\'', '').split(', ')
             for i in range(len(line_list)):
                 line_list[i] = line_list[i].split('\\')[-1]
             data_dict['IDs_2'] = line_list
@@ -111,7 +106,6 @@ class Results:
         '''
         pred_label = np.load(self.pred_label).reshape(-1)
         true_label = np.load(self.true_label).reshape(-1)
-
 
         # 用来保存每个电池的预测结果
         # To save the prediction results of each battery
@@ -151,7 +145,6 @@ class Results:
         results_dict['RMSE'] = RMSE_list
 
         return results_dict
-
 
     def get_test_results(self,train=0,test=1,e=1):
         '''
@@ -220,9 +213,10 @@ class Results:
 
         return df_mean
 
+
 if __name__ == '__main__':
     # # XJTU soh-estimation
-    for model in ['Transformer']:   # 'MLP','CNN','KAN','BiLSTMTransformer','KAN_small','LSTM','TCN','Transformer'
+    for model in ['Transformer']: # 'MLP','CNN','KAN','KAN_small','Transformer'
         if not os.path.exists(f'results_soh-estimation/processed_results/{model}/'):
             os.makedirs(f'results_soh-estimation/processed_results/{model}/')
         root = f'results_soh-estimation/{model}/XJTU-{model} results/' 
@@ -237,7 +231,7 @@ if __name__ == '__main__':
         writer._save()
 
     # # # XJTU small-sample
-    for model in ['Transformer']: # 'MLP','CNN','KAN','BiLSTMTransformer','LSTM','TCN','Transformer'
+    for model in ['Transformer']: # 'MLP','CNN','KAN','KAN_small','Transformer'
         if not os.path.exists(f'results_small-sample/processed_results/{model}/'):
             os.makedirs(f'results_small-sample/processed_results/{model}/')
         for n in [1,2,3,4]:

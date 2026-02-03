@@ -3,22 +3,14 @@ import numpy as np
 import os
 import time
 from dataloader.dataloader import XJTUdata
-from Model.Compare_Models import MLP, CNN, kan
-from Model.BiLSTMTransformer import BiLSTMTransformer
+from Model.Compare_Models import MLP, CNN, kan, Transformer, KAN_medium, KAN_small
 from Model.PINN_opt import PINN_opt
 from Model.PIKAN_opt import PIKAN_opt
+from Model.PIKAN_hgs import PIKAN_hgs
 from Model.PIKAN_small import PIKAN_small
 import argparse
+from utils.util import set_seed
 
-# 设置随机种子以确保结果可重复
-def set_seed(seed=42):
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed(seed)
-        torch.cuda.manual_seed_all(seed)
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
 
 # 获取参数
 def get_args():
@@ -52,13 +44,14 @@ def get_args():
     
     return parser.parse_args()
 
+
 # 加载XJTU测试数据
 def load_test_XJTU_data(args,model_name):
     if model_name == 'PIKAN_small':
         xjtu_batch_0 = torch.load('Data/XJTU_Data_Var2_batch_0.pt')
         testloader = xjtu_batch_0['test_loader']
     else:
-        root = 'data/XJTU data'
+        root = 'Data/XJTU data'
         data = XJTUdata(root=root, args=args)
         
         # 获取batch 1的测试文件
@@ -72,6 +65,7 @@ def load_test_XJTU_data(args,model_name):
         dataloader = data.read_all(specific_path_list=test_list)
         testloader = dataloader['test_3'] 
     return testloader  # 使用完整的测试集
+
 
 # 准备测试样本
 def prepare_test_samples(data_loader, num_samples, device):
@@ -89,6 +83,7 @@ def prepare_test_samples(data_loader, num_samples, device):
     # 如果样本数量不足，返回所有可用样本
     return torch.cat(samples, dim=0)
 
+
 # 加载模型
 def load_model(model_name, args, device):
     if model_name == 'MLP':
@@ -100,9 +95,15 @@ def load_model(model_name, args, device):
     elif model_name == 'kan':
         model = kan().to(device)
         model_path = os.path.join(args.results_dir, 'KAN', f'XJTU-KAN results/0-0/Experiment1/model.pth')
-    elif model_name == 'BiLSTMTransformer':
-        model = BiLSTMTransformer().to(device)
-        model_path = os.path.join(args.results_dir, 'BiLSTMTransformer', f'XJTU-BiLSTMTransformer results/0-0/Experiment1/model.pth')
+    elif model_name == 'Transformer':
+        model = Transformer().to(device)
+        model_path = os.path.join(args.results_dir, 'Transformer', f'XJTU-Transformer results/0-0/Experiment1/model.pth')
+    elif model_name == 'KAN_medium':
+        model = KAN_medium().to(device)
+        model_path = os.path.join(args.results_dir, 'KAN_medium', f'XJTU-KAN_medium results/0-0/Experiment1/model.pth')
+    elif model_name == 'KAN_small':
+        model = KAN_small().to(device)
+        model_path = os.path.join(args.results_dir, 'KAN_small', f'XJTU-KAN_small results/0-0/Experiment1/model.pth')
     elif model_name == 'PINN_opt':
         model = PINN_opt(args).to(device)
         # model_path = os.path.join(args.results_dir, 'PINN_opt', f'XJTU results/0-0/Experiment1/best_results/best_model.pth')
@@ -111,6 +112,10 @@ def load_model(model_name, args, device):
         model = PIKAN_opt(args).to(device)
         # model_path = os.path.join(args.results_dir, 'PIKAN_opt', f'XJTU results/0-0/Experiment1/best_results/best_model.pth')
         model_path = os.path.join(args.results_dir, 'PIKAN_opt', f'XJTU results/0-0/Experiment1/group25/model.pth')
+    elif model_name == 'PIKAN_hgs':
+        model = PIKAN_hgs(args).to(device)
+        # model_path = os.path.join(args.results_dir, 'PIKAN_hgs', f'XJTU results/0-0/Experiment1/best_results/best_model.pth')
+        model_path = os.path.join(args.results_dir, 'PIKAN_hgs', f'XJTU results/0-0/Experiment1/group25/model.pth')
     elif model_name == 'PIKAN_small':
         model = PIKAN_small(args).to(device)
         # model_path = os.path.join(args.results_dir, 'PIKAN_small', f'XJTU results/0-0/Experiment1/best_results/best_model.pth')
@@ -122,7 +127,7 @@ def load_model(model_name, args, device):
     if os.path.exists(model_path):
         try:
             # 对于PINN类型的模型，需要加载两个部分的参数
-            if model_name in ['PINN_opt', 'PIKAN_opt', 'PIKAN_small']:
+            if model_name in ['PINN_opt', 'PIKAN_opt', 'PIKAN_hgs', 'PIKAN_small']:
                 checkpoint = torch.load(model_path, map_location=device)
                 model.solution_u.load_state_dict(checkpoint['solution_u'])
                 model.dynamical_F.load_state_dict(checkpoint['dynamical_F'])
@@ -138,6 +143,7 @@ def load_model(model_name, args, device):
         print('使用随机初始化的模型进行测试')
     
     return model
+
 
 # 测试模型推理时间
 def test_inference_time(model, inputs, device, warmup_runs=5):
@@ -174,25 +180,16 @@ def test_inference_time(model, inputs, device, warmup_runs=5):
     
     return total_time
 
+
 # 主函数
 def main():
     args = get_args()
     set_seed(args.test_seed)
     device = torch.device(args.device)
     print(f'使用设备: {device}')
-    
-    # # 加载测试数据
-    # print('正在加载测试数据...')
-    # test_loader = load_test_XJTU_data(args)
-    
-    # # 准备测试样本
-    # print(f'正在准备{args.num_samples}个测试样本...')
-    # test_samples = prepare_test_samples(test_loader, args.num_samples, device)
-    # actual_samples = test_samples.shape[0]
-    # print(f'成功准备{actual_samples}个测试样本')
-    
+
     # 定义要测试的模型列表
-    models_to_test = ['MLP', 'CNN', 'kan', 'BiLSTMTransformer', 'PINN_opt', 'PIKAN_opt', 'PIKAN_small']
+    models_to_test = ['MLP', 'CNN', 'kan', 'KAN_medium', 'KAN_small', 'Transformer', 'PINN_opt', 'PIKAN_opt', 'PIKAN_hgs', 'PIKAN_small']
     
     # 存储每个模型的平均推理时间
     results = {}
@@ -232,6 +229,7 @@ def main():
         for model_name, avg_time in results.items():
             f.write(f'{model_name},{avg_time:.6f}\n')
     print(f'\n结果已保存到: {results_file}')
+
 
 if __name__ == '__main__':
     main()

@@ -61,7 +61,7 @@ class LR_Scheduler(object): # 用于调整优化器的学习率
 
 
 
-class PIKAN_opt(nn.Module): # 手动调整损失函数权重，0.7,0.2
+class PIKAN_opt(nn.Module): # 网格搜索优化损失函数的权重，各层神经元数量与PINN模型一致，总参数量远大于PINN模型，输入神经元数量为17
     def __init__(self,args):
         super(PIKAN_opt, self).__init__()
         self.args = args
@@ -72,7 +72,7 @@ class PIKAN_opt(nn.Module): # 手动调整损失函数权重，0.7,0.2
         self._save_args()
 
         self.solution_u = Solution_u().to(device)   # 求解偏微分方程解的网络
-        self.dynamical_F = KAN([34,60,60,1]).to(device) # 用于计算动态方程的网络
+        self.dynamical_F = KAN([34,60,60,1]).to(device) # 用于计算动态方程的网络,这里不是35个输入，不包含u关于t的偏导数
 
         # self.optimizer = torch.optim.Adam(self.parameters(), lr=args.warmup_lr)
         self.optimizer1 = torch.optim.Adam(self.solution_u.parameters(), lr=args.warmup_lr)

@@ -61,7 +61,7 @@ class LR_Scheduler(object): # 用于调整优化器的学习率
 
 
 
-class PIKAN_small(nn.Module): # 手动调整损失函数权重，0.7,0.2
+class PIKAN_small(nn.Module): # 网格搜索优化损失函数的权重，总参数量远小于PINN模型，输入神经元数量为2
     def __init__(self,args):
         super(PIKAN_small, self).__init__()
         self.args = args

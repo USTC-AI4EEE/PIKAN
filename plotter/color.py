@@ -1,6 +1,3 @@
-import pyautogui as pg
-import keyboard
-
 def rgb2hex(r, g, b):
     return '#{:02x}{:02x}{:02x}'.format(r, g, b)
 
@@ -30,8 +27,9 @@ def hex_to_decimal(hex_color):
 
     return (red_decimal_normalized, green_decimal_normalized, blue_decimal_normalized)
 
-# 测试(test)
-hex_color = "#F7C97E"
-result = hex_to_decimal(hex_color)
-print(result)
+if __name__ == '__main__':
+    # 测试(test)
+    hex_color = "#F7C97E"
+    result = hex_to_decimal(hex_color)
+    print(result)
 

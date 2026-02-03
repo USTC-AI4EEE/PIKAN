@@ -3,12 +3,12 @@ import torch.nn as nn
 import numpy as np
 import os
 from utils.util import AverageMeter,get_logger
-from Model.Compare_Models import MLP,CNN,kan,KAN_small,LSTM,TCN,Transformer,KAN_medium
-from Model.BiLSTMTransformer import BiLSTMTransformer
-from Model.Model import LR_Scheduler
-from dataloader.dataloader import XJTUdata,HUSTdata,MITdata,TJUdata
+from Model.Compare_Models import MLP,CNN,kan,KAN_small,Transformer,KAN_medium
+from Model.PINN_opt import LR_Scheduler
+from dataloader.dataloader import MITdata
 import argparse
-from assistant import set_seed
+from utils.util import set_seed
+
 
 class Trainer():
     def __init__(self,model,train_loader,valid_loader,test_loader,args):
@@ -18,7 +18,6 @@ class Trainer():
         self.train_loader = train_loader
         self.valid_loader = valid_loader
         self.test_loader = test_loader
-
         self.save_dir = args.save_folder
         if not os.path.exists(self.save_dir):
             os.makedirs(self.save_dir)
@@ -46,14 +45,11 @@ class Trainer():
         for (x1,_,y1,_) in self.train_loader:
             x1 = x1.to(self.device)
             y1 = y1.to(self.device)
-
-
             y_pred = self.model(x1)
             loss = self.loss_func(y_pred,y1)
             self.optimizer.zero_grad()
             loss.backward()
             self.optimizer.step()
-
             self.loss_meter.update(loss.item())
         info = '[Train] epoch:{}, data loss:{:.6f}'.format(epoch,self.loss_meter.avg)
         self.logger.info(info)
@@ -66,7 +62,6 @@ class Trainer():
             for (x1,_,y1,_) in self.valid_loader:
                 x1 = x1.to(self.device)
                 y1 = y1.to(self.device)
-
                 y_pred = self.model(x1)
                 loss = self.loss_func(y_pred,y1)
                 self.loss_meter.update(loss.item())
@@ -83,7 +78,6 @@ class Trainer():
             for (x1,_,y1,_) in self.test_loader:
                 x1 = x1.to(self.device)
                 y_pred = self.model(x1)
-
                 true_label.append(y1.cpu().detach().numpy())
                 pred_label.append(y_pred.cpu().detach().numpy())
         true_label = np.concatenate(true_label,axis=0)
@@ -117,22 +111,17 @@ def load_model(args):
         model = CNN()
     elif args.model == 'KAN':
         model = kan()
-    elif args.model == 'BiLSTMTransformer':
-        model = BiLSTMTransformer()
     elif args.model == 'KAN_small':
         model = KAN_small()
-    elif args.model == 'LSTM':
-        model = LSTM()
-    elif args.model == 'TCN':
-        model = TCN()
     elif args.model == 'Transformer':
         model = Transformer()
     elif args.model == 'KAN_medium':
         model = KAN_medium()
     return model
 
+
 def load_MIT_data(args,small_sample=None):
-    root = 'data/MIT data'
+    root = 'Data/MIT data'
     train_list = []
     test_list = []
     for batch in ['2017-05-12','2017-06-30','2018-04-12']:
@@ -160,15 +149,6 @@ def get_args():
     parser.add_argument('--dataset',type=str,default='XJTU',choices=['XJTU','HUST','MIT','TJU'])
     parser.add_argument('--normalization_method',type=str, default='min-max', help='min-max,z-score')
 
-    # # XJTU data
-    # parser.add_argument('--xjtu_batch',type=str,default='2C',choices=['2C','3C','R2.5','R3','RW','satellite'])
-
-    # # TJU data
-    # parser.add_argument('--in_same_batch',type=bool,default=True)
-    # parser.add_argument('--tju_batch',type=int,default=0,choices=[0,1,2])
-    # parser.add_argument('--tju_train_batch',type=int,default=-1, choices=[-1,0,1,2])
-    # parser.add_argument('--tju_test_batch',type=int,default=-1, choices=[-1,0,1,2])
-
     # scheduler related
     parser.add_argument('--epochs', type=int, default=200, help='epoch')
     parser.add_argument('--early_stop', type=int, default=20, help='early stop')
@@ -178,8 +158,7 @@ def get_args():
     parser.add_argument('--final_lr', type=float, default=2e-4, help='final lr')
     parser.add_argument('--lr_F', type=float, default=5e-4, help='lr of F')
 
-
-    parser.add_argument('--save_folder',type=str,default='./results of reviewer/')
+    parser.add_argument('--save_folder',type=str,default='results/')
     parser.add_argument('--log_dir',type=str,default='logging.txt')
     parser.add_argument('--batch_size',type=int,default=512)
 
@@ -187,6 +166,7 @@ def get_args():
     if not os.path.exists(args.save_folder):
         os.makedirs(args.save_folder)
     return args
+
 
 def main_2():
     args = get_args()
@@ -202,6 +182,7 @@ def main_2():
         trainer = Trainer(model,mit_dataset['train_loader'],mit_dataset['valid_loader'],mit_dataset['test_loader'],args)
         trainer.train()
 
+
 def main():
     args = get_args()
     setattr(args,'model','KAN_medium') # select model: MLP or CNN or KAN
@@ -215,6 +196,7 @@ def main():
         data_loader = load_MIT_data(args)
         trainer = Trainer(model,data_loader['train'],data_loader['valid'],data_loader['test'],args)
         trainer.train()
+
 
 def small_sample():
     args = get_args()
@@ -236,7 +218,7 @@ def small_sample():
 if __name__ == '__main__':
     main()
     small_sample()
-    # main_2()
+    main_2()
 
 
 

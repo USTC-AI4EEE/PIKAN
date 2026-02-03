@@ -8,12 +8,9 @@ Parse the fine-tuning results
 import pandas as pd
 import numpy as np
 import os
-# from utils.util import eval_metrix
-# import matplotlib.pyplot as plt
-# import scienceplots
-# plt.style.use('science')
-
 from sklearn import metrics
+
+
 def eval_metrix(true_label,pred_label):
     MAE = metrics.mean_absolute_error(true_label,pred_label)
     MAPE = metrics.mean_absolute_percentage_error(true_label,pred_label)
@@ -101,18 +98,17 @@ class Results:
 
         data_dict['valid_data_loss'] = valid_data_loss
 
-
         # 解析数据路径 (Parse the data path)
         line1 = lines[1]
         if '.csv' in line1:
             line = line1[1:-2]
-            line_list = line.replace(f'data/{self.dataset} data/', '').replace('.csv','').replace('\'','').split(', ')
+            line_list = line.replace(f'Data/{self.dataset} data/', '').replace('.csv','').replace('\'','').split(', ')
             data_dict['IDs_1'] = line_list
 
         line2 = lines[3]
         if '.csv' in line2:
             line = line2[1:-2]
-            line_list = line.replace(f'data/{self.dataset} data/', '').replace('.csv', '').replace('\'', '').split(', ')
+            line_list = line.replace(f'Data/{self.dataset} data/', '').replace('.csv', '').replace('\'', '').split(', ')
             for i in range(len(line_list)):
                 line_list[i] = line_list[i].split('\\')[-1]
             data_dict['IDs_2'] = line_list
@@ -255,10 +251,8 @@ class Results:
         return df
 
 
-
-
 if __name__ == '__main__':
-    model_name = 'PINN'
+    model_name = 'PINN' # PIKAN or PINN
     finetune_method = 'fine_tuning'
 
     if not os.path.exists(f'results_fine-tuning/processed_results/{model_name}/{finetune_method}'):
@@ -280,7 +274,6 @@ if __name__ == '__main__':
         #df_experiment_mean = results.get_experiments_mean(train_batch=batch,test_batch=batch)
         df_battery_mean = results.get_battery_average(batch=batch)
         df_source_only = results.get_source_only()
-
 
         # # 最后两行添加所有样本的均值和方差 (add the mean and variance of all samples in the last two rows)
         # mean = df_battery_mean.mean(axis=0)

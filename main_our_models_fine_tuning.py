@@ -2,12 +2,12 @@ from Model.PIKAN_opt import PIKAN_opt as PIKAN
 import torch
 import torch.nn as nn
 from dataloader.dataloader import XJTUdata,TJUdata,MITdata,HUSTdata
-from Model.Model import LR_Scheduler
 import argparse
 import os
 import numpy as np
-from utils.util import AverageMeter,eval_metrix,write_to_txt
+from utils.util import AverageMeter, eval_metrix, write_to_txt
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
 
 class AdaPIKAN(PIKAN):
     def __init__(self,args):
@@ -100,8 +100,9 @@ class AdaPIKAN(PIKAN):
         if self.args.save_folder is not None:
             torch.save(self.best_model, os.path.join(self.args.save_folder, 'finetune model.pth'))
 
+
 def load_XJTU_data(args,small_sample=None):
-    root = 'data/XJTU data'
+    root = 'Data/XJTU data'
     batch_names= ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
     batch_num = args.target_batch if args.target_data == 'XJTU' else args.source_batch
     batch = batch_names[batch_num]
@@ -124,8 +125,9 @@ def load_XJTU_data(args,small_sample=None):
                   'test': test_loader['test_3']}
     return dataloader
 
+
 def load_TJU_data(args,small_sample=None):
-    root = 'data/TJU data'
+    root = 'Data/TJU data'
     data = TJUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -155,8 +157,9 @@ def load_TJU_data(args,small_sample=None):
                     'test': test_loader['test_3']}
     return dataloader
 
+
 def load_MIT_data(args,small_sample=None):
-    root = 'data/MIT data'
+    root = 'Data/MIT data'
     train_list = []
     test_list = []
     for batch in ['2017-05-12','2017-06-30','2018-04-12']:
@@ -177,21 +180,22 @@ def load_MIT_data(args,small_sample=None):
 
     return dataloader
 
+
 def load_HUST_data(args,small_sample=None):
     test_id = ['1-4','1-8','2-4','2-8',
                '3-4','3-8','4-4','4-8',
                '5-4','5-7','6-4','6-8',
                '7-4','7-8','8-4','8-8',
                '9-4','9-8','10-4','10-8']
-    data = HUSTdata(root='data/HUST data',args=args)
+    data = HUSTdata(root='Data/HUST data',args=args)
     train_list = []
     test_list = []
-    files = os.listdir('data/HUST data')
+    files = os.listdir('Data/HUST data')
     for f in files:
         if f[:-4] in test_id:
-            test_list.append(f'data/HUST data/{f}')
+            test_list.append(f'Data/HUST data/{f}')
         else:
-            train_list.append(f'data/HUST data/{f}')
+            train_list.append(f'Data/HUST data/{f}')
     if small_sample is not None:
         train_list = train_list[:small_sample]
 
@@ -200,6 +204,7 @@ def load_HUST_data(args,small_sample=None):
     dataloader = {'train':trainloader['train_2'],'valid':trainloader['valid_2'],'test':testloader['test_3']}
 
     return dataloader
+
 
 def one_adaptation_task(args,source,target,source_batch=-1,target_batch=-1):
     if not os.path.exists(args.save_folder):
@@ -233,6 +238,7 @@ def one_adaptation_task(args,source,target,source_batch=-1,target_batch=-1):
     # adaptation
     model.Adaptation(trainloader=target_loader['train'],validloader=target_loader['valid'],testloader=target_loader['test'])
 
+
 def FineTune_TJU2XJTU():
     args = get_args()
     lrs = [0.0004,0.01,0.0005,0.002,0.003,0.0006]
@@ -244,6 +250,7 @@ def FineTune_TJU2XJTU():
             setattr(args,'log_dir','logging.txt')
             setattr(args,'save_folder',f'results_fine-tuning/{args.model_name}/fine_tuning/TJU-XJTU/batch{tb}/Experiment{experiment + 1}')
             one_adaptation_task(args,source='TJU',target='XJTU',source_batch=sb,target_batch=tb)
+
 
 def FineTune_XJTU2TJU():
     args = get_args()
@@ -257,6 +264,7 @@ def FineTune_XJTU2TJU():
             setattr(args,'save_folder',f'results_fine-tuning/{args.model_name}/fine_tuning/XJTU-TJU/batch{tb}/Experiment{experiment + 1}')
             one_adaptation_task(args,source='XJTU',target='TJU',source_batch=sb,target_batch=tb)
 
+
 def FineTune_HUST2MIT():
     args = get_args()
     for experiment in range(10):
@@ -265,6 +273,7 @@ def FineTune_HUST2MIT():
         setattr(args,'save_folder',f'results_fine-tuning/{args.model_name}/fine_tuning/HUST-MIT/Experiment{experiment + 1}')
         one_adaptation_task(args,source='HUST',target='MIT')
 
+
 def FineTune_MIT2HUST():
     args = get_args()
     for experiment in range(10):
@@ -272,6 +281,7 @@ def FineTune_MIT2HUST():
         setattr(args,'log_dir','logging.txt')
         setattr(args,'save_folder',f'results_fine-tuning/{args.model_name}/fine_tuning/MIT-HUST/Experiment{experiment + 1}')
         one_adaptation_task(args,source='MIT',target='HUST')
+
 
 def FineTune():
     args = get_args()
@@ -292,6 +302,7 @@ def FineTune():
                 setattr(args, 'save_folder',
                         f'results_fine-tuning/{args.model_name}/fine_tuning/{source}-{target}/Experiment{e + 1}')
                 one_adaptation_task(args, source=source, target=target, source_batch=sb, target_batch=tb)
+
 
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for fine-tuning')
@@ -337,10 +348,11 @@ def get_args():
 
     return args
 
+
 if __name__ == '__main__':
-    # FineTune_MIT2HUST()
+    FineTune_MIT2HUST()
     FineTune_HUST2MIT()
-    # FineTune_TJU2XJTU()
-    # FineTune_XJTU2TJU()
+    FineTune_TJU2XJTU()
+    FineTune_XJTU2TJU()
     FineTune()
-    # pass
+

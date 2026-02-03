@@ -1,9 +1,9 @@
-axes.titlesize : 18
-axes.labelsize : 16
+axes.titlesize : 24
+axes.labelsize : 20
+lines.linewidth : 6
+lines.markersize : 10
+xtick.labelsize : 18
+ytick.labelsize : 18
 axes.titleweight: bold
 axes.labelweight: bold
-lines.linewidth : 2
-xtick.labelsize : 16
-ytick.labelsize : 16
 font.weight : bold
-text.usetex : False

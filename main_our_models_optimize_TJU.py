@@ -1,29 +1,17 @@
 from dataloader.dataloader import TJUdata
-from Model.SA_PIKAN import SA_PIKAN
-from Model.PIKAN_AdpBal import PIKAN_AdpBal
-from Model.PIKAN_PCGrad import PIKAN_PCGrad
-from Model.PIKAN_Sum import PIKAN_Sum
-from Model.PIKAN import PIKAN
-from Model.PIMLP_PCGrad import PIMLP_PCGrad
-from Model.PIMLP_Sum import PIMLP_Sum
-from Model.PIMLP import PIMLP
-from Model.PIMLP_v1 import PIMLP_v1
-from Model.PIMultKAN import PIMultKAN
-from Model.PIChebyKAN import PIChebyKAN
 from Model.PIKAN_opt import PIKAN_opt
 from Model.PINN_opt import PINN_opt
 from Model.PIKAN_hgs import PIKAN_hgs
-from Model.VerhulstPIKAN import VerhulstPIKAN
-from Model.VerhulstPINN import VerhulstPINN
 from Model.PIKAN_small import PIKAN_small
 import argparse
 import os
-from assistant import get_gpus_memory_info,set_seed
 import numpy as np
 import torch
-from utils.util import eval_metrix,get_logger
+from utils.util import eval_metrix,get_logger,set_seed
+
+
 def load_TJU_data_initial(args,small_sample=None):  # 这是PINN4SOH原文代码，但是这个代码读取文件时会因设备而异，故需要对此进行修改
-    root = 'data/TJU data'
+    root = 'Data/TJU data'
     data = TJUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -62,8 +50,9 @@ def load_TJU_data_initial(args,small_sample=None):  # 这是PINN4SOH原文代码
                       'test': test_loader['test_3']}
     return dataloader
 
+
 def load_TJU_data(args,small_sample=None):  # 这是修改后的代码，测试集选取的电池与原文结果文件里保持一致
-    root = 'data/TJU data'
+    root = 'Data/TJU data'
     data = TJUdata(root=root, args=args)
     train_list = []
     test_list = []
@@ -101,46 +90,22 @@ def load_TJU_data(args,small_sample=None):  # 这是修改后的代码，测试�
                       'test': test_loader['test_3']}
     return dataloader
 
+
 def load_model(args):
-    if args.model_name == 'SA_PIKAN':
-        model = SA_PIKAN(args)
-    elif args.model_name == 'PIKAN_AdpBal':
-        model = PIKAN_AdpBal(args)
-    elif args.model_name == 'PIKAN_PCGrad':
-        model = PIKAN_PCGrad(args)
-    elif args.model_name == 'PIKAN_Sum':
-        model = PIKAN_Sum(args)
-    elif args.model_name == 'PIKAN':
-        model = PIKAN(args)
-    elif args.model_name == 'PIMLP_PCGrad':
-        model = PIMLP_PCGrad(args)
-    elif args.model_name == 'PIMLP_Sum':
-        model = PIMLP_Sum(args)
-    elif args.model_name == 'PIMLP':
-        model = PIMLP(args)
-    elif args.model_name == 'PIMLP_v1':
-        model = PIMLP_v1(args)
-    elif args.model_name == 'PIMultKAN':
-        model = PIMultKAN(args)
-    elif args.model_name == 'PIChebyKAN':
-        model = PIChebyKAN(args)
+    if args.model_name == 'PINN_opt':
+        model = PINN_opt(args)
     elif args.model_name == 'PIKAN_opt':
         model = PIKAN_opt(args)
-    elif args.model_name == 'PINN_opt':
-        model = PINN_opt(args)
-    elif args.model_name == 'VerhulstPIKAN':
-        model = VerhulstPIKAN(args)
-    elif args.model_name == 'VerhulstPINN':
-        model = VerhulstPINN(args)
     elif args.model_name == 'PIKAN_small':
         model = PIKAN_small(args)
     elif args.model_name == 'PIKAN_hgs':
         model = PIKAN_hgs(args)
     return model
 
+
 def main_2():
     args = get_args()
-    setattr(args,'model_name','PIKAN_small')
+    setattr(args,'model_name','PIKAN_small') # 只运行PIKAN_small
     batchs = [0,1,2]       
     for batch in [2]:
         setattr(args, 'in_same_batch', True)
@@ -148,7 +113,6 @@ def main_2():
         for e in range(10):
             set_seed(e)         
             best_MAPE = float('inf')  # 初始化当前i和e下的最佳MAPE为正无穷
-            # best_RMSE = float('inf')    
             best_alpha = None
             best_beta = None
             best_metrics = None
@@ -179,8 +143,6 @@ def main_2():
                     # 判断是否为当前i和e下MAPE最小的组合
                     if metrics[1] < best_MAPE:
                         best_MAPE = metrics[1]
-                    # if metrics[3] < best_RMSE:
-                    #     best_RMSE = metrics[3]
                         best_alpha = alpha
                         best_beta = beta
                         best_metrics = metrics
@@ -200,9 +162,10 @@ def main_2():
             torch.save(best_model,os.path.join(best_save_folder,'best_model.pth'))
             torch.cuda.empty_cache()
 
+
 def main():
     args = get_args()
-    setattr(args,'model_name','PIKAN_hgs')
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
     batchs = [0,1,2]       
     for batch in batchs:
         setattr(args, 'in_same_batch', True)
@@ -210,7 +173,6 @@ def main():
         for e in range(10):
             set_seed(e)         
             best_MAPE = float('inf')  # 初始化当前i和e下的最佳MAPE为正无穷
-            # best_RMSE = float('inf')    
             best_alpha = None
             best_beta = None
             best_metrics = None
@@ -241,8 +203,6 @@ def main():
                     # 判断是否为当前i和e下MAPE最小的组合
                     if metrics[1] < best_MAPE:
                         best_MAPE = metrics[1]
-                    # if metrics[3] < best_RMSE:
-                    #     best_RMSE = metrics[3]
                         best_alpha = alpha
                         best_beta = beta
                         best_metrics = metrics
@@ -262,9 +222,10 @@ def main():
             torch.save(best_model,os.path.join(best_save_folder,'best_model.pth'))
             torch.cuda.empty_cache()
 
+
 def small_sample():
     args = get_args()
-    setattr(args,'model_name','PIKAN_hgs')
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
     batchs = [0,1,2]
     for n in [1,2]:
         for i in [2]:
@@ -314,14 +275,15 @@ def small_sample():
                 np.save(os.path.join(best_save_folder, 'pred_label.npy'), best_pred_label)
                 best_log_dir = os.path.join(best_save_folder, "logging.txt") 
                 best_logger = get_logger(best_log_dir) 
-                info = '[Best]  alpha: {}, beta: {}, MSE: {:.4f}, MAPE: {:.4f}, MSE: {:.6f}, RMSE: {:.4f}'.format(best_alpha,best_beta,best_metrics[0], best_metrics[1], best_metrics[2], best_metrics[3])
+                info = '[Best]  alpha: {}, beta: {}, MAE: {:.4f}, MAPE: {:.4f}, MSE: {:.6f}, RMSE: {:.4f}'.format(best_alpha,best_beta,best_metrics[0], best_metrics[1], best_metrics[2], best_metrics[3])
                 best_logger.info(info)
                 torch.save(best_model,os.path.join(best_save_folder,'best_model.pth'))
                 torch.cuda.empty_cache()
 
+
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for TJU dataset')
-    parser.add_argument('--model_name',type=str,default='PIKAN',choices=['SA_PIKAN','PIKAN_AdpBal','PIKAN_PCGrad','PIMLP_PCGrad','PIKAN_Sum','PIMLP_Sum','PIKAN','PIMLP'])
+    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_hgs'])
     parser.add_argument('--data', type=str, default='TJU', help='XJTU, HUST, MIT, TJU')
     parser.add_argument('--in_same_batch', type=bool, default=True, help='训练集和测试集是否在同一个batch中(whether train and test sets are in the same batch)')
     parser.add_argument('--train_batch', type=int, default=-1, choices=[-1,0,1,2],
@@ -350,9 +312,6 @@ def get_args():
     parser.add_argument('--F_hidden_dim', type=int, default=60, help='the hidden dim of F')
 
     # loss related
-    parser.add_argument('--lr_cos',type=int,default=0.001,help='lr of cos_sim')
-    parser.add_argument('--lr_w',type=int,default=0.001,help='lr of loss weights')
-    parser.add_argument('--mode',type=str,default='AdpBal',help=['Baseline','Sum','AdpBal'])
     parser.add_argument('--alpha', type=float, default=0.7, help='loss = l_data + alpha * l_PDE + beta * l_physics')
     parser.add_argument('--beta', type=float, default=0.2, help='loss = l_data + alpha * l_PDE + beta * l_physics')
     parser.add_argument('--alpha_values', type=float, default=[0.001, 0.01, 0.1, 1, 10, 100, 1000], help='loss = l_data + alpha * l_PDE + beta * l_physics')   #[0.001, 0.01, 0.1, 1, 10, 100, 1000]

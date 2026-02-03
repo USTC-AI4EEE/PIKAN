@@ -7,12 +7,9 @@ English:
 import pandas as pd
 import numpy as np
 import os
-# from utils.util import eval_metrix
-# import matplotlib.pyplot as plt
-# import scienceplots
-# plt.style.use('science')
-
 from sklearn import metrics
+
+
 def eval_metrix(true_label,pred_label):
     MAE = metrics.mean_absolute_error(true_label,pred_label)
     MAPE = metrics.mean_absolute_percentage_error(true_label,pred_label)
@@ -21,11 +18,11 @@ def eval_metrix(true_label,pred_label):
     R2 = metrics.r2_score(true_label, pred_label)
     return [MAE,MAPE,MSE,RMSE,R2]
 
+
 class Results:
     def __init__(self,root='../results/HUST results/'):
         self.root = root
         self.experiments = os.listdir(root)
-
         self.log_dir = None
         self.pred_label = None
         self.true_label = None
@@ -99,13 +96,13 @@ class Results:
         line1 = lines[1]
         if '.csv' in line1:
             line = line1[1:-2]
-            line_list = line.replace('data/HUST data/', '').replace('.csv','').replace('\'','').split(', ')
+            line_list = line.replace('Data/HUST data/', '').replace('.csv','').replace('\'','').split(', ')
             data_dict['IDs_1'] = line_list
 
         line2 = lines[3]
         if '.csv' in line2:
             line = line2[1:-2]
-            line_list = line.replace('data/HUST data/', '').replace('.csv', '').replace('\'', '').split(', ')
+            line_list = line.replace('Data/HUST data/', '').replace('.csv', '').replace('\'', '').split(', ')
             data_dict['IDs_2'] = line_list
 
         return data_dict
@@ -120,7 +117,6 @@ class Results:
         pred_label = np.load(self.pred_label).reshape(-1)
         true_label = np.load(self.true_label).reshape(-1)
         [MAE, MAPE, MSE, RMSE, R2] = eval_metrix(pred_label, true_label)
-
 
         # 用来保存每个电池的预测结果
         # To save the prediction results of each battery
@@ -146,7 +142,6 @@ class Results:
             [MAE_i, MAPE_i, MSE_i, RMSE_i, R2_i] = eval_metrix(pred_i, true_i)
             #print('battery {} MAE:{:.4f}, MAPE:{:.4f}, MSE:{:.6f}, RMSE:{:.4f}, R2:{:.4f}'.format(i+1,MAE_i, MAPE_i, MSE_i, RMSE_i,R2_i))
             start = end+1
-
             pred_label_list.append(pred_i)
             true_label_list.append(true_i)
             MAE_list.append(MAE_i)
@@ -164,7 +159,6 @@ class Results:
         results_dict['RMSE'] = RMSE_list
         results_dict['R2'] = R2_list
         return results_dict
-
 
     def get_test_results(self,e):
         '''
@@ -224,10 +218,9 @@ class Results:
         return df_mean
 
 
-
 if __name__ == '__main__':
 
-    model_name = 'PIKAN_small'
+    model_name = 'PIKAN_opt' # PIKAN_opt or PIKAN_hgs or PINN_opt or PIKAN_small
 
     # HUST soh-estimation
     root = f'results_soh-estimation/{model_name}/HUST results/'
@@ -242,19 +235,19 @@ if __name__ == '__main__':
     # df_experiment_mean.to_excel(writer, sheet_name='experiment_mean_0', index=False)
     writer._save()
 
-    # # HUST small-sample
-    # for n in [1,2,3,4]:
-    #     root = f'results_small-sample/{model_name}/HUST results (small sample {n})/'
-    #     save_folder = f'results_small-sample/processed_results/{model_name}/'
-    #     if not os.path.exists(save_folder):
-    #         os.makedirs(save_folder)
-    #     writer = pd.ExcelWriter(f'results_small-sample/processed_results/{model_name}/{model_name}_HUST_results_small_sample_{n}_best.xlsx')
-    #     results = Results(root)
-    #     df_battery_mean = results.get_battery_mean()
-    #     # df_experiment_mean = results.get_experiments_mean()
-    #     df_battery_mean.to_excel(writer, sheet_name='battery_mean_0', index=False)
-    #     # df_experiment_mean.to_excel(writer, sheet_name='experiment_mean_0', index=False)
-    #     writer._save()
+    # HUST small-sample
+    for n in [1,2,3,4]:
+        root = f'results_small-sample/{model_name}/HUST results (small sample {n})/'
+        save_folder = f'results_small-sample/processed_results/{model_name}/'
+        if not os.path.exists(save_folder):
+            os.makedirs(save_folder)
+        writer = pd.ExcelWriter(f'results_small-sample/processed_results/{model_name}/{model_name}_HUST_results_small_sample_{n}_best.xlsx')
+        results = Results(root)
+        df_battery_mean = results.get_battery_mean()
+        # df_experiment_mean = results.get_experiments_mean()
+        df_battery_mean.to_excel(writer, sheet_name='battery_mean_0', index=False)
+        # df_experiment_mean.to_excel(writer, sheet_name='experiment_mean_0', index=False)
+        writer._save()
 
 
 

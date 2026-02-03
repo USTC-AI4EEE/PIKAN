@@ -1,7 +1,5 @@
 import torch
 import torch.nn as nn
-# from Model.Model import MLP as Encoder
-# from Model.Model import Predictor
 from Model.efficient_kan import KAN
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
@@ -44,7 +42,6 @@ class Encoder(nn.Module):
     def forward(self,x):
         x = self.net(x)
         return x
-
 
 class Predictor(nn.Module):
     def __init__(self,input_dim=40):
@@ -129,7 +126,6 @@ class MLP(nn.Module):
         x = self.predictor(x)
         return x
 
-
 class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__()
@@ -150,64 +146,6 @@ class CNN(nn.Module):
         out = self.layer5(out)
         out = self.layer6(out.view(N,-1))
         return out.view(N,1)
-
-
-class LSTM(nn.Module):
-    def __init__(self):
-        super(LSTM, self).__init__()
-        self.lstm = nn.LSTM(input_size=17, hidden_size=64, num_layers=2, batch_first=True, bidirectional=True, dropout=0.2)
-        self.fc = nn.Linear(64 * 2, 1)
-        self.to(device)
-
-    def forward(self, x):
-        # Reshape input to (batch_size, sequence_length, input_size)
-        x = x.unsqueeze(1)  # (N, 1, 17)
-        
-        # LSTM forward pass
-        lstm_out, _ = self.lstm(x)  # (N, 1, 64*2)
-        
-        # Take the output from the last time step
-        lstm_out = lstm_out[:, -1, :]  # (N, 64*2)
-        
-        # Fully connected layer
-        out = self.fc(lstm_out)  # (N, 1)
-        
-        return out.view(-1, 1)
-
-
-class TCN(nn.Module):
-    def __init__(self):
-        super(TCN, self).__init__()
-        # TCN layers with dilated convolutions
-        self.tcn = nn.Sequential(
-            nn.Conv1d(in_channels=1, out_channels=32, kernel_size=3, padding=1, dilation=1),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Conv1d(in_channels=32, out_channels=64, kernel_size=3, padding=2, dilation=2),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.Conv1d(in_channels=64, out_channels=128, kernel_size=3, padding=4, dilation=4),
-            nn.ReLU(),
-            nn.Dropout(0.2),
-            nn.AdaptiveAvgPool1d(1)
-        )
-        self.fc = nn.Linear(128, 1)
-        self.to(device)
-
-    def forward(self, x):
-        N, L = x.shape[0], x.shape[1]
-        x = x.view(N, 1, L)  # (N, 1, 17)
-        
-        # TCN forward pass
-        tcn_out = self.tcn(x)  # (N, 128, 1)
-        
-        # Flatten
-        tcn_out = tcn_out.view(N, -1)  # (N, 128)
-        
-        # Fully connected layer
-        out = self.fc(tcn_out)  # (N, 1)
-        
-        return out.view(-1, 1)
 
 class Transformer(nn.Module):
     def __init__(self, d_model=32, nhead=4, num_layers=1): # d_model=32, nhead=4, num_layers=1,2;
@@ -241,61 +179,6 @@ class Transformer(nn.Module):
         soh = self.output_head(x_transposed)
         return soh
 
-class Transformer_v1(nn.Module):
-    def __init__(self):
-        super(Transformer_v1, self).__init__()
-        self.input_dim = 17
-        self.hidden_dim = 64
-        self.num_heads = 4
-        self.num_layers = 1
-        
-        # Embedding layer to project input to hidden dimension
-        self.embedding = nn.Linear(self.input_dim, self.hidden_dim)
-        
-        # Positional encoding
-        self.positional_encoding = self._get_positional_encoding(1, self.hidden_dim)
-        
-        # Transformer encoder layer
-        encoder_layer = nn.TransformerEncoderLayer(d_model=self.hidden_dim, nhead=self.num_heads, dropout=0.2, batch_first=True)
-        self.transformer_encoder = nn.TransformerEncoder(encoder_layer, num_layers=self.num_layers)
-        
-        # Fully connected layer
-        self.fc = nn.Linear(self.hidden_dim, 1)
-        self.to(device)
-
-    def _get_positional_encoding(self, max_len, d_model):
-        pe = torch.zeros(max_len, d_model)
-        position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
-        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-torch.log(torch.tensor(10000.0)) / d_model))
-        pe[:, 0::2] = torch.sin(position * div_term)
-        pe[:, 1::2] = torch.cos(position * div_term)
-        pe = pe.unsqueeze(0)  # Add batch dimension
-        return nn.Parameter(pe, requires_grad=False)
-
-    def forward(self, x):
-        N, L = x.shape[0], x.shape[1]
-        
-        # Reshape to (N, 1, 17) for sequence processing
-        x = x.unsqueeze(1)  # (N, 1, 17)
-        
-        # Embedding
-        x_emb = self.embedding(x)  # (N, 1, 64)
-        
-        # Add positional encoding
-        x_emb = x_emb + self.positional_encoding[:, :x_emb.size(1), :].to(device)  # (N, 1, 64)
-        
-        # Transformer forward pass
-        transformer_out = self.transformer_encoder(x_emb)  # (N, 1, 64)
-        
-        # Take the output from the only time step
-        transformer_out = transformer_out[:, -1, :]  # (N, 64)
-        
-        # Fully connected layer
-        out = self.fc(transformer_out)  # (N, 1)
-        
-        return out.view(-1, 1)
-
-
 def count_parameters(model):
     count = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print('The model has {} trainable parameters'.format(count))
@@ -305,18 +188,21 @@ if __name__ == '__main__':
     x = torch.randn(10,17)
     y1 = MLP()(x)
     y2 = CNN()(x)
-    y3 = LSTM()(x)
-    y4 = TCN()(x)
-    y5 = Transformer()(x)
+    y3 = kan()(x)
+    y4 = KAN_medium()(x)
+    y5 = KAN_small()(x)
+    y6 = Transformer()(x)
     
     print("MLP output shape:", y1.shape)
     print("CNN output shape:", y2.shape)
-    print("LSTM output shape:", y3.shape)
-    print("TCN output shape:", y4.shape)
-    print("Transformer output shape:", y5.shape)
+    print("KAN output shape:", y3.shape)
+    print("KAN_medium output shape:", y4.shape)
+    print("KAN_small output shape:", y5.shape)
+    print("Transformer output shape:", y6.shape)
     
     count_parameters(MLP())
     count_parameters(CNN())
-    count_parameters(LSTM())
-    count_parameters(TCN())
+    count_parameters(kan())
+    count_parameters(KAN_medium())
+    count_parameters(KAN_small())
     count_parameters(Transformer())

@@ -7,12 +7,9 @@ English:
 import pandas as pd
 import numpy as np
 import os
-# from utils.util import eval_metrix
-# import matplotlib.pyplot as plt
-# import scienceplots
-# plt.style.use('science')
-
 from sklearn import metrics
+
+
 def eval_metrix(true_label,pred_label):
     MAE = metrics.mean_absolute_error(true_label,pred_label)
     MAPE = metrics.mean_absolute_percentage_error(true_label,pred_label)
@@ -20,6 +17,7 @@ def eval_metrix(true_label,pred_label):
     RMSE = np.sqrt(metrics.mean_squared_error(true_label,pred_label))
     R2 = metrics.r2_score(true_label, pred_label)
     return [MAE,MAPE,MSE,RMSE,R2]
+
 
 class Results:
     def __init__(self,root='../results/TJU results/',gap=0.07):
@@ -91,17 +89,16 @@ class Results:
         data_dict['test_mse'] = test_mse
         data_dict['test_epoch'] = test_epoch
 
-
         line1 = lines[1]
         if '.csv' in line1:
             line = line1[1:-2]
-            line_list = line.replace('data/TJU data/', '').replace('.csv','').replace('\'','').split(', ')
+            line_list = line.replace('Data/TJU data/', '').replace('.csv','').replace('\'','').split(', ')
             data_dict['IDs_1'] = line_list
 
         line2 = lines[3]
         if '.csv' in line2:
             line = line2[1:-2]
-            line_list = line.replace('data/TJU data/', '').replace('.csv', '').replace('\'', '').split(', ')
+            line_list = line.replace('Data/TJU data/', '').replace('.csv', '').replace('\'', '').split(', ')
             for i in range(len(line_list)):
                 line_list[i] = line_list[i].split('\\')[-1]
             data_dict['IDs_2'] = line_list
@@ -166,7 +163,6 @@ class Results:
         results_dict['RMSE'] = RMSE_list
         results_dict['R2'] = R2_list
         return results_dict
-
 
     def get_test_results(self,train=0,test=1,e=1,s='best_results'):
         '''
@@ -246,11 +242,9 @@ class Results:
         return df_mean
 
 
-
-
 if __name__ == '__main__':
 
-    model_name = 'PIKAN_opt'
+    model_name = 'PIKAN_opt' # PIKAN_opt or PIKAN_hgs or PINN_opt or PIKAN_small
 
     # TJU soh-estimation
     root = f'results_soh-estimation/{model_name}/TJU results/'
@@ -264,18 +258,18 @@ if __name__ == '__main__':
         df_group_mean.to_excel(writer,sheet_name='group_mean_{}'.format(batch),index=False)
     writer._save()
 
-    # # TJU small-sample
-    # for n in [1,2]:
-    #     root = f'results_small-sample/{model_name}/TJU results (small sample {n})/'
-    #     save_folder = f'results_small-sample/processed_results/{model_name}/'
-    #     if not os.path.exists(save_folder):
-    #         os.makedirs(save_folder)
-    #     writer = pd.ExcelWriter(f'results_small-sample/processed_results/{model_name}/{model_name}_TJU_results_small_sample_{n}_group_mean.xlsx')
-    #     results = Results(root, gap=0.07)
-    #     for batch in [2]:
-    #         df_group_mean = results.get_group_average(train_batch=batch,test_batch=batch,total_group=49)
-    #         df_group_mean.to_excel(writer,sheet_name='group_mean_{}'.format(batch),index=False)
-    #     writer._save()
+    # TJU small-sample
+    for n in [1,2]:
+        root = f'results_small-sample/{model_name}/TJU results (small sample {n})/'
+        save_folder = f'results_small-sample/processed_results/{model_name}/'
+        if not os.path.exists(save_folder):
+            os.makedirs(save_folder)
+        writer = pd.ExcelWriter(f'results_small-sample/processed_results/{model_name}/{model_name}_TJU_results_small_sample_{n}_group_mean.xlsx')
+        results = Results(root, gap=0.07)
+        for batch in [2]:
+            df_group_mean = results.get_group_average(train_batch=batch,test_batch=batch,total_group=49)
+            df_group_mean.to_excel(writer,sheet_name='group_mean_{}'.format(batch),index=False)
+        writer._save()
 
 
 
