@@ -1,0 +1,869 @@
+2025-06-18 01:19 - function:_save_args - INFO - Args:
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:19 - function:_save_args - CRITICAL - 	mark:1.3
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:400.784002
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:001, data loss:0.007177
+2025-06-18 01:19 - function:Train - INFO - [Test] MSE: 0.00665053, MAE: 0.081266, MAPE: 0.095097, RMSE: 0.081551
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:134.643637
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:002, data loss:73.847164
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:83.054807
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:003, data loss:98.486595
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:48.303460
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:004, data loss:29.775872
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:17.764127
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:005, data loss:5.232467
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:11.484269
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:006, data loss:10.966314
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:5.019041
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:007, data loss:5.266754
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:3.287384
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:008, data loss:0.255974
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:1.537480
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:009, data loss:0.010815
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:0.768507
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:010, data loss:0.000098
+2025-06-18 01:19 - function:Train - INFO - [Test] MSE: 0.00011470, MAE: 0.008538, MAPE: 0.009138, RMSE: 0.010710
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:0.394748
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:011, data loss:0.115195
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:012, lr:0.005034, data loss:0.212204
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:012, data loss:0.279385
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:013, lr:0.005310, data loss:0.129831
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:013, data loss:0.041432
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:014, lr:0.005586, data loss:0.050000
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:014, data loss:0.061320
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:015, lr:0.005862, data loss:0.032635
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:015, data loss:0.000138
+2025-06-18 01:19 - function:Train - INFO - [Train] epoch:016, lr:0.006138, data loss:0.014162
+2025-06-18 01:19 - function:Train - INFO - [Valid] epoch:016, data loss:0.006860
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:017, lr:0.006414, data loss:0.007545
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:017, data loss:0.005991
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:018, lr:0.006690, data loss:0.004004
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:018, data loss:0.001944
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:019, lr:0.006966, data loss:0.002150
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:019, data loss:0.000092
+2025-06-18 01:20 - function:Train - INFO - [Test] MSE: 0.00012306, MAE: 0.008544, MAPE: 0.009144, RMSE: 0.011093
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:020, lr:0.007241, data loss:0.000989
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:020, data loss:0.001093
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:021, lr:0.007517, data loss:0.000603
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:021, data loss:0.000268
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:022, lr:0.007793, data loss:0.000344
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:022, data loss:0.000412
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:023, lr:0.008069, data loss:0.000246
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:023, data loss:0.000128
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:024, lr:0.008345, data loss:0.000209
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:024, data loss:0.000093
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:025, lr:0.008621, data loss:0.000197
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:025, data loss:0.000164
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:026, lr:0.008897, data loss:0.000169
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:026, data loss:0.000133
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:027, lr:0.009172, data loss:0.000149
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:027, data loss:0.000093
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:028, lr:0.009448, data loss:0.000106
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:028, data loss:0.000100
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:029, lr:0.009724, data loss:0.000098
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:029, data loss:0.000111
+2025-06-18 01:20 - function:Train - INFO - [Train] epoch:030, lr:0.010000, data loss:0.000118
+2025-06-18 01:20 - function:Train - INFO - [Valid] epoch:030, data loss:0.000105
+2025-06-18 01:20 - function:Train - INFO - early stop at epoch 30
+2025-06-18 01:23 - function:_save_args - INFO - Args:
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	mark:2.4
+2025-06-18 01:23 - function:_save_args - INFO - Args:
+2025-06-18 01:23 - function:_save_args - INFO - Args:
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	mark:2.5
+2025-06-18 01:23 - function:_save_args - CRITICAL - 	mark:2.5
+2025-06-18 01:24 - function:_save_args - INFO - Args:
+2025-06-18 01:24 - function:_save_args - INFO - Args:
+2025-06-18 01:24 - function:_save_args - INFO - Args:
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:24 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:25 - function:_save_args - INFO - Args:
+2025-06-18 01:25 - function:_save_args - INFO - Args:
+2025-06-18 01:25 - function:_save_args - INFO - Args:
+2025-06-18 01:25 - function:_save_args - INFO - Args:
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:25 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-18 01:26 - function:_save_args - INFO - Args:
+2025-06-18 01:26 - function:_save_args - INFO - Args:
+2025-06-18 01:26 - function:_save_args - INFO - Args:
+2025-06-18 01:26 - function:_save_args - INFO - Args:
+2025-06-18 01:26 - function:_save_args - INFO - Args:
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:26 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:1258.006988
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:1258.006988
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:1258.006988
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:1258.006988
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:1258.006988
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:001, data loss:0.062352
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:001, data loss:0.062352
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:001, data loss:0.062352
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:001, data loss:0.062352
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:001, data loss:0.062352
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.06044148, MAE: 0.245614, MAPE: 0.357580, RMSE: 0.245848
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.06044148, MAE: 0.245614, MAPE: 0.357580, RMSE: 0.245848
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.06044148, MAE: 0.245614, MAPE: 0.357580, RMSE: 0.245848
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.06044148, MAE: 0.245614, MAPE: 0.357580, RMSE: 0.245848
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.06044148, MAE: 0.245614, MAPE: 0.357580, RMSE: 0.245848
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:423.031624
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:423.031624
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:423.031624
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:423.031624
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:423.031624
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:002, data loss:212.142242
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:002, data loss:212.142242
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:002, data loss:212.142242
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:002, data loss:212.142242
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:002, data loss:212.142242
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:255.858385
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:255.858385
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:255.858385
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:255.858385
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:255.858385
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:003, data loss:290.209656
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:003, data loss:290.209656
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:003, data loss:290.209656
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:003, data loss:290.209656
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:003, data loss:290.209656
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:148.838248
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:148.838248
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:148.838248
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:148.838248
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:148.838248
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:004, data loss:115.184696
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:004, data loss:115.184696
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:004, data loss:115.184696
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:004, data loss:115.184696
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:004, data loss:115.184696
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:58.835556
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:58.835556
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:58.835556
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:58.835556
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:58.835556
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:005, data loss:3.783958
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:005, data loss:3.783958
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:005, data loss:3.783958
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:005, data loss:3.783958
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:005, data loss:3.783958
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:31.187333
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:31.187333
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:31.187333
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:31.187333
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:31.187333
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:006, data loss:42.921410
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:006, data loss:42.921410
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:006, data loss:42.921410
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:006, data loss:42.921410
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:006, data loss:42.921410
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:17.452450
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:17.452450
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:17.452450
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:17.452450
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:17.452450
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:007, data loss:5.829884
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:007, data loss:5.829884
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:007, data loss:5.829884
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:007, data loss:5.829884
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:007, data loss:5.829884
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:9.815252
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:9.815252
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:9.815252
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:9.815252
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:9.815252
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:008, data loss:1.193655
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:008, data loss:1.193655
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:008, data loss:1.193655
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:008, data loss:1.193655
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:008, data loss:1.193655
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:4.342633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:4.342633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:4.342633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:4.342633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:4.342633
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:009, data loss:3.108507
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:009, data loss:3.108507
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:009, data loss:3.108507
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:009, data loss:3.108507
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:009, data loss:3.108507
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:2.356633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:2.356633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:2.356633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:2.356633
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:2.356633
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:010, data loss:1.791681
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:010, data loss:1.791681
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:010, data loss:1.791681
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:010, data loss:1.791681
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:010, data loss:1.791681
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:1.267954
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:1.267954
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:1.267954
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:1.267954
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:1.267954
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:011, data loss:0.400561
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:011, data loss:0.400561
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:011, data loss:0.400561
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:011, data loss:0.400561
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:011, data loss:0.400561
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:012, lr:0.005034, data loss:0.623294
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:012, lr:0.005034, data loss:0.623294
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:012, lr:0.005034, data loss:0.623294
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:012, lr:0.005034, data loss:0.623294
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:012, lr:0.005034, data loss:0.623294
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:012, data loss:0.034151
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:012, data loss:0.034151
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:012, data loss:0.034151
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:012, data loss:0.034151
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:012, data loss:0.034151
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.03584823, MAE: 0.188494, MAPE: 0.168145, RMSE: 0.189336
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.03584823, MAE: 0.188494, MAPE: 0.168145, RMSE: 0.189336
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.03584823, MAE: 0.188494, MAPE: 0.168145, RMSE: 0.189336
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.03584823, MAE: 0.188494, MAPE: 0.168145, RMSE: 0.189336
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.03584823, MAE: 0.188494, MAPE: 0.168145, RMSE: 0.189336
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:013, lr:0.005310, data loss:0.306727
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:013, lr:0.005310, data loss:0.306727
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:013, lr:0.005310, data loss:0.306727
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:013, lr:0.005310, data loss:0.306727
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:013, lr:0.005310, data loss:0.306727
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:013, data loss:0.419134
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:013, data loss:0.419134
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:013, data loss:0.419134
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:013, data loss:0.419134
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:013, data loss:0.419134
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:014, lr:0.005586, data loss:0.203378
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:014, lr:0.005586, data loss:0.203378
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:014, lr:0.005586, data loss:0.203378
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:014, lr:0.005586, data loss:0.203378
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:014, lr:0.005586, data loss:0.203378
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:014, data loss:0.036149
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:014, data loss:0.036149
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:014, data loss:0.036149
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:014, data loss:0.036149
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:014, data loss:0.036149
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:015, lr:0.005862, data loss:0.077602
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:015, lr:0.005862, data loss:0.077602
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:015, lr:0.005862, data loss:0.077602
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:015, lr:0.005862, data loss:0.077602
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:015, lr:0.005862, data loss:0.077602
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:015, data loss:0.116824
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:015, data loss:0.116824
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:015, data loss:0.116824
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:015, data loss:0.116824
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:015, data loss:0.116824
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:016, lr:0.006138, data loss:0.048913
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:016, lr:0.006138, data loss:0.048913
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:016, lr:0.006138, data loss:0.048913
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:016, lr:0.006138, data loss:0.048913
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:016, lr:0.006138, data loss:0.048913
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:016, data loss:0.018240
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:016, data loss:0.018240
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:016, data loss:0.018240
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:016, data loss:0.018240
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:016, data loss:0.018240
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.01954198, MAE: 0.138686, MAPE: 0.129565, RMSE: 0.139793
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.01954198, MAE: 0.138686, MAPE: 0.129565, RMSE: 0.139793
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.01954198, MAE: 0.138686, MAPE: 0.129565, RMSE: 0.139793
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.01954198, MAE: 0.138686, MAPE: 0.129565, RMSE: 0.139793
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.01954198, MAE: 0.138686, MAPE: 0.129565, RMSE: 0.139793
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:017, lr:0.006414, data loss:0.023299
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:017, lr:0.006414, data loss:0.023299
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:017, lr:0.006414, data loss:0.023299
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:017, lr:0.006414, data loss:0.023299
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:017, lr:0.006414, data loss:0.023299
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:017, data loss:0.000492
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:017, data loss:0.000492
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:017, data loss:0.000492
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:017, data loss:0.000492
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:017, data loss:0.000492
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00035434, MAE: 0.015265, MAPE: 0.016533, RMSE: 0.018824
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00035434, MAE: 0.015265, MAPE: 0.016533, RMSE: 0.018824
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00035434, MAE: 0.015265, MAPE: 0.016533, RMSE: 0.018824
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00035434, MAE: 0.015265, MAPE: 0.016533, RMSE: 0.018824
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00035434, MAE: 0.015265, MAPE: 0.016533, RMSE: 0.018824
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:018, lr:0.006690, data loss:0.010879
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:018, lr:0.006690, data loss:0.010879
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:018, lr:0.006690, data loss:0.010879
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:018, lr:0.006690, data loss:0.010879
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:018, lr:0.006690, data loss:0.010879
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:018, data loss:0.000234
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:018, data loss:0.000234
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:018, data loss:0.000234
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:018, data loss:0.000234
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:018, data loss:0.000234
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00022235, MAE: 0.012184, MAPE: 0.013163, RMSE: 0.014912
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00022235, MAE: 0.012184, MAPE: 0.013163, RMSE: 0.014912
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00022235, MAE: 0.012184, MAPE: 0.013163, RMSE: 0.014912
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00022235, MAE: 0.012184, MAPE: 0.013163, RMSE: 0.014912
+2025-06-18 01:26 - function:Train - INFO - [Test] MSE: 0.00022235, MAE: 0.012184, MAPE: 0.013163, RMSE: 0.014912
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:019, lr:0.006966, data loss:0.005646
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:019, lr:0.006966, data loss:0.005646
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:019, lr:0.006966, data loss:0.005646
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:019, lr:0.006966, data loss:0.005646
+2025-06-18 01:26 - function:Train - INFO - [Train] epoch:019, lr:0.006966, data loss:0.005646
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:019, data loss:0.000935
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:019, data loss:0.000935
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:019, data loss:0.000935
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:019, data loss:0.000935
+2025-06-18 01:26 - function:Train - INFO - [Valid] epoch:019, data loss:0.000935
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:020, lr:0.007241, data loss:0.002759
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:020, lr:0.007241, data loss:0.002759
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:020, lr:0.007241, data loss:0.002759
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:020, lr:0.007241, data loss:0.002759
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:020, lr:0.007241, data loss:0.002759
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:020, data loss:0.002723
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:020, data loss:0.002723
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:020, data loss:0.002723
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:020, data loss:0.002723
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:020, data loss:0.002723
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:021, lr:0.007517, data loss:0.001904
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:021, lr:0.007517, data loss:0.001904
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:021, lr:0.007517, data loss:0.001904
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:021, lr:0.007517, data loss:0.001904
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:021, lr:0.007517, data loss:0.001904
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:021, data loss:0.001933
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:021, data loss:0.001933
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:021, data loss:0.001933
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:021, data loss:0.001933
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:021, data loss:0.001933
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:022, lr:0.007793, data loss:0.001158
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:022, lr:0.007793, data loss:0.001158
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:022, lr:0.007793, data loss:0.001158
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:022, lr:0.007793, data loss:0.001158
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:022, lr:0.007793, data loss:0.001158
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:022, data loss:0.000377
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:022, data loss:0.000377
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:022, data loss:0.000377
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:022, data loss:0.000377
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:022, data loss:0.000377
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:023, lr:0.008069, data loss:0.000640
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:023, lr:0.008069, data loss:0.000640
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:023, lr:0.008069, data loss:0.000640
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:023, lr:0.008069, data loss:0.000640
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:023, lr:0.008069, data loss:0.000640
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:023, data loss:0.000416
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:023, data loss:0.000416
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:023, data loss:0.000416
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:023, data loss:0.000416
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:023, data loss:0.000416
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:024, lr:0.008345, data loss:0.000488
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:024, lr:0.008345, data loss:0.000488
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:024, lr:0.008345, data loss:0.000488
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:024, lr:0.008345, data loss:0.000488
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:024, lr:0.008345, data loss:0.000488
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:024, data loss:0.000665
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:024, data loss:0.000665
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:024, data loss:0.000665
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:024, data loss:0.000665
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:024, data loss:0.000665
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:025, lr:0.008621, data loss:0.000426
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:025, lr:0.008621, data loss:0.000426
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:025, lr:0.008621, data loss:0.000426
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:025, lr:0.008621, data loss:0.000426
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:025, lr:0.008621, data loss:0.000426
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:025, data loss:0.000370
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:025, data loss:0.000370
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:025, data loss:0.000370
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:025, data loss:0.000370
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:025, data loss:0.000370
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:026, lr:0.008897, data loss:0.000361
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:026, lr:0.008897, data loss:0.000361
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:026, lr:0.008897, data loss:0.000361
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:026, lr:0.008897, data loss:0.000361
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:026, lr:0.008897, data loss:0.000361
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:026, data loss:0.000478
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:026, data loss:0.000478
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:026, data loss:0.000478
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:026, data loss:0.000478
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:026, data loss:0.000478
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:027, lr:0.009172, data loss:0.000311
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:027, lr:0.009172, data loss:0.000311
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:027, lr:0.009172, data loss:0.000311
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:027, lr:0.009172, data loss:0.000311
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:027, lr:0.009172, data loss:0.000311
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:027, data loss:0.000298
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:027, data loss:0.000298
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:027, data loss:0.000298
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:027, data loss:0.000298
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:027, data loss:0.000298
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:028, lr:0.009448, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:028, lr:0.009448, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:028, lr:0.009448, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:028, lr:0.009448, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:028, lr:0.009448, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:028, data loss:0.000230
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:028, data loss:0.000230
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:028, data loss:0.000230
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:028, data loss:0.000230
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:028, data loss:0.000230
+2025-06-18 01:27 - function:Train - INFO - [Test] MSE: 0.00020036, MAE: 0.011721, MAPE: 0.012648, RMSE: 0.014155
+2025-06-18 01:27 - function:Train - INFO - [Test] MSE: 0.00020036, MAE: 0.011721, MAPE: 0.012648, RMSE: 0.014155
+2025-06-18 01:27 - function:Train - INFO - [Test] MSE: 0.00020036, MAE: 0.011721, MAPE: 0.012648, RMSE: 0.014155
+2025-06-18 01:27 - function:Train - INFO - [Test] MSE: 0.00020036, MAE: 0.011721, MAPE: 0.012648, RMSE: 0.014155
+2025-06-18 01:27 - function:Train - INFO - [Test] MSE: 0.00020036, MAE: 0.011721, MAPE: 0.012648, RMSE: 0.014155
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:029, lr:0.009724, data loss:0.000239
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:029, lr:0.009724, data loss:0.000239
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:029, lr:0.009724, data loss:0.000239
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:029, lr:0.009724, data loss:0.000239
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:029, lr:0.009724, data loss:0.000239
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:029, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:029, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:029, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:029, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:029, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:030, lr:0.010000, data loss:0.000255
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:030, lr:0.010000, data loss:0.000255
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:030, lr:0.010000, data loss:0.000255
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:030, lr:0.010000, data loss:0.000255
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:030, lr:0.010000, data loss:0.000255
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:030, data loss:0.000340
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:030, data loss:0.000340
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:030, data loss:0.000340
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:030, data loss:0.000340
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:030, data loss:0.000340
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:031, lr:0.010000, data loss:0.000409
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:031, lr:0.010000, data loss:0.000409
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:031, lr:0.010000, data loss:0.000409
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:031, lr:0.010000, data loss:0.000409
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:031, lr:0.010000, data loss:0.000409
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:031, data loss:0.000834
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:031, data loss:0.000834
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:031, data loss:0.000834
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:031, data loss:0.000834
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:031, data loss:0.000834
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:032, lr:0.009940, data loss:0.000434
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:032, lr:0.009940, data loss:0.000434
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:032, lr:0.009940, data loss:0.000434
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:032, lr:0.009940, data loss:0.000434
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:032, lr:0.009940, data loss:0.000434
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:032, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:032, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:032, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:032, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:032, data loss:0.000231
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:033, lr:0.009760, data loss:0.000256
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:033, lr:0.009760, data loss:0.000256
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:033, lr:0.009760, data loss:0.000256
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:033, lr:0.009760, data loss:0.000256
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:033, lr:0.009760, data loss:0.000256
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:033, data loss:0.000446
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:033, data loss:0.000446
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:033, data loss:0.000446
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:033, data loss:0.000446
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:033, data loss:0.000446
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:034, lr:0.009466, data loss:0.000316
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:034, lr:0.009466, data loss:0.000316
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:034, lr:0.009466, data loss:0.000316
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:034, lr:0.009466, data loss:0.000316
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:034, lr:0.009466, data loss:0.000316
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:034, data loss:0.000257
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:034, data loss:0.000257
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:034, data loss:0.000257
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:034, data loss:0.000257
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:034, data loss:0.000257
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:035, lr:0.009064, data loss:0.000260
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:035, lr:0.009064, data loss:0.000260
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:035, lr:0.009064, data loss:0.000260
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:035, lr:0.009064, data loss:0.000260
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:035, lr:0.009064, data loss:0.000260
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:035, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:035, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:035, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:035, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:035, data loss:0.000285
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:036, lr:0.008565, data loss:0.000271
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:036, lr:0.008565, data loss:0.000271
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:036, lr:0.008565, data loss:0.000271
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:036, lr:0.008565, data loss:0.000271
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:036, lr:0.008565, data loss:0.000271
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:036, data loss:0.000245
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:036, data loss:0.000245
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:036, data loss:0.000245
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:036, data loss:0.000245
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:036, data loss:0.000245
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:037, lr:0.007980, data loss:0.000252
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:037, lr:0.007980, data loss:0.000252
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:037, lr:0.007980, data loss:0.000252
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:037, lr:0.007980, data loss:0.000252
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:037, lr:0.007980, data loss:0.000252
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:037, data loss:0.000247
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:037, data loss:0.000247
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:037, data loss:0.000247
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:037, data loss:0.000247
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:037, data loss:0.000247
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:038, lr:0.007325, data loss:0.000289
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:038, lr:0.007325, data loss:0.000289
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:038, lr:0.007325, data loss:0.000289
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:038, lr:0.007325, data loss:0.000289
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:038, lr:0.007325, data loss:0.000289
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:038, data loss:0.000329
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:038, data loss:0.000329
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:038, data loss:0.000329
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:038, data loss:0.000329
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:038, data loss:0.000329
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:039, lr:0.006614, data loss:0.000292
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:039, lr:0.006614, data loss:0.000292
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:039, lr:0.006614, data loss:0.000292
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:039, lr:0.006614, data loss:0.000292
+2025-06-18 01:27 - function:Train - INFO - [Train] epoch:039, lr:0.006614, data loss:0.000292
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:039, data loss:0.000270
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:039, data loss:0.000270
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:039, data loss:0.000270
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:039, data loss:0.000270
+2025-06-18 01:27 - function:Train - INFO - [Valid] epoch:039, data loss:0.000270
+2025-06-18 01:27 - function:Train - INFO - early stop at epoch 39
+2025-06-18 01:27 - function:Train - INFO - early stop at epoch 39
+2025-06-18 01:27 - function:Train - INFO - early stop at epoch 39
+2025-06-18 01:27 - function:Train - INFO - early stop at epoch 39
+2025-06-18 01:27 - function:Train - INFO - early stop at epoch 39
+2025-06-18 01:30 - function:_save_args - INFO - Args:
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:30 - function:_save_args - CRITICAL - 	mark:2.3
+2025-06-18 01:31 - function:_save_args - INFO - Args:
+2025-06-18 01:31 - function:_save_args - INFO - Args:
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	data:XJTU
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	batch_size:256
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	lr_F:0.0005
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_xjtu_var2/
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/XJTU results/kan_fit_2
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_xjtu_var2/video_img_fit_2
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	mark:2.4
+2025-06-18 01:31 - function:_save_args - CRITICAL - 	mark:2.4

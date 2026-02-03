@@ -1,0 +1,542 @@
+2025-10-05 14:57 - function:_save_args - INFO - Args:
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	mark1:1.3
+2025-10-05 14:57 - function:_save_args - CRITICAL - 	mark2:1.3
+2025-10-05 14:57 - function:train_one_epoch - INFO - [epoch:1 iter:50] data loss:0.000351, PDE loss:0.000172, physics loss:0.000024
+2025-10-05 14:57 - function:train_one_epoch - INFO - [epoch:1 iter:100] data loss:0.000257, PDE loss:0.000063, physics loss:0.000015
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:1 iter:150] data loss:0.000184, PDE loss:0.000022, physics loss:0.000007
+2025-10-05 14:58 - function:Train - INFO - [Train] epoch:1, lr:0.002000, total loss:0.000945
+2025-10-05 14:58 - function:Train - INFO - [Valid] epoch:1, MSE: 0.0001603695855010301
+2025-10-05 14:58 - function:Train - INFO - [Test] MSE: 0.00014245, MAE: 0.010300, MAPE: 0.010636, RMSE: 0.011935
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:2 iter:50] data loss:0.000136, PDE loss:0.000005, physics loss:0.000003
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:2 iter:100] data loss:0.000128, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:2 iter:150] data loss:0.000120, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 14:58 - function:Train - INFO - [Train] epoch:2, lr:0.002276, total loss:0.000140
+2025-10-05 14:58 - function:Train - INFO - [Valid] epoch:2, MSE: 0.00012011006037937477
+2025-10-05 14:58 - function:Train - INFO - [Test] MSE: 0.00011389, MAE: 0.009190, MAPE: 0.009359, RMSE: 0.010672
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:3 iter:50] data loss:0.000119, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:3 iter:100] data loss:0.000114, PDE loss:0.000001, physics loss:0.000005
+2025-10-05 14:58 - function:train_one_epoch - INFO - [epoch:3 iter:150] data loss:0.000121, PDE loss:0.000001, physics loss:0.000005
+2025-10-05 14:58 - function:Train - INFO - [Train] epoch:3, lr:0.002552, total loss:0.000125
+2025-10-05 14:58 - function:Train - INFO - [Valid] epoch:3, MSE: 0.00011854512558784336
+2025-10-05 14:58 - function:Train - INFO - [Test] MSE: 0.00011410, MAE: 0.009146, MAPE: 0.009279, RMSE: 0.010682
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:4 iter:50] data loss:0.000114, PDE loss:0.000001, physics loss:0.000005
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:4 iter:100] data loss:0.000121, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:4 iter:150] data loss:0.000113, PDE loss:0.000001, physics loss:0.000005
+2025-10-05 14:59 - function:Train - INFO - [Train] epoch:4, lr:0.002828, total loss:0.000124
+2025-10-05 14:59 - function:Train - INFO - [Valid] epoch:4, MSE: 0.00011817157792393118
+2025-10-05 14:59 - function:Train - INFO - [Test] MSE: 0.00011218, MAE: 0.009108, MAPE: 0.009251, RMSE: 0.010592
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:5 iter:50] data loss:0.000125, PDE loss:0.000001, physics loss:0.000007
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:5 iter:100] data loss:0.000107, PDE loss:0.000000, physics loss:0.000003
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:5 iter:150] data loss:0.000111, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 14:59 - function:Train - INFO - [Train] epoch:5, lr:0.003103, total loss:0.000124
+2025-10-05 14:59 - function:Train - INFO - [Valid] epoch:5, MSE: 0.00011717470624716952
+2025-10-05 14:59 - function:Train - INFO - [Test] MSE: 0.00011031, MAE: 0.008949, MAPE: 0.009073, RMSE: 0.010503
+2025-10-05 14:59 - function:train_one_epoch - INFO - [epoch:6 iter:50] data loss:0.000124, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:6 iter:100] data loss:0.000113, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:6 iter:150] data loss:0.000119, PDE loss:0.000000, physics loss:0.000004
+2025-10-05 15:00 - function:Train - INFO - [Train] epoch:6, lr:0.003379, total loss:0.000123
+2025-10-05 15:00 - function:Train - INFO - [Valid] epoch:6, MSE: 0.00011681716569000855
+2025-10-05 15:00 - function:Train - INFO - [Test] MSE: 0.00010987, MAE: 0.008897, MAPE: 0.009013, RMSE: 0.010482
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:7 iter:50] data loss:0.000118, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:7 iter:100] data loss:0.000135, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:7 iter:150] data loss:0.000106, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:Train - INFO - [Train] epoch:7, lr:0.003655, total loss:0.000123
+2025-10-05 15:00 - function:Train - INFO - [Valid] epoch:7, MSE: 0.00011683746561175212
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:8 iter:50] data loss:0.000117, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:8 iter:100] data loss:0.000122, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:00 - function:train_one_epoch - INFO - [epoch:8 iter:150] data loss:0.000122, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:01 - function:Train - INFO - [Train] epoch:8, lr:0.003931, total loss:0.000123
+2025-10-05 15:01 - function:Train - INFO - [Valid] epoch:8, MSE: 0.00011702031770255417
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:9 iter:50] data loss:0.000120, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:9 iter:100] data loss:0.000121, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:9 iter:150] data loss:0.000123, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:01 - function:Train - INFO - [Train] epoch:9, lr:0.004207, total loss:0.000123
+2025-10-05 15:01 - function:Train - INFO - [Valid] epoch:9, MSE: 0.00011722736235242337
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:10 iter:50] data loss:0.000115, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:10 iter:100] data loss:0.000125, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:10 iter:150] data loss:0.000127, PDE loss:0.000001, physics loss:0.000005
+2025-10-05 15:01 - function:Train - INFO - [Train] epoch:10, lr:0.004483, total loss:0.000124
+2025-10-05 15:01 - function:Train - INFO - [Valid] epoch:10, MSE: 0.00011777305189752951
+2025-10-05 15:01 - function:train_one_epoch - INFO - [epoch:11 iter:50] data loss:0.000117, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:11 iter:100] data loss:0.000122, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:11 iter:150] data loss:0.000122, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:02 - function:Train - INFO - [Train] epoch:11, lr:0.004759, total loss:0.000123
+2025-10-05 15:02 - function:Train - INFO - [Valid] epoch:11, MSE: 0.00011717978486558422
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:12 iter:50] data loss:0.000120, PDE loss:0.000002, physics loss:0.000006
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:12 iter:100] data loss:0.000109, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:12 iter:150] data loss:0.000115, PDE loss:0.000003, physics loss:0.000003
+2025-10-05 15:02 - function:Train - INFO - [Train] epoch:12, lr:0.005034, total loss:0.000123
+2025-10-05 15:02 - function:Train - INFO - [Valid] epoch:12, MSE: 0.00011756586900446564
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:13 iter:50] data loss:0.000112, PDE loss:0.000001, physics loss:0.000005
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:13 iter:100] data loss:0.000125, PDE loss:0.000009, physics loss:0.000004
+2025-10-05 15:02 - function:train_one_epoch - INFO - [epoch:13 iter:150] data loss:0.000119, PDE loss:0.000002, physics loss:0.000003
+2025-10-05 15:02 - function:Train - INFO - [Train] epoch:13, lr:0.005310, total loss:0.000127
+2025-10-05 15:02 - function:Train - INFO - [Valid] epoch:13, MSE: 0.000119719588838052
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:14 iter:50] data loss:0.000129, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:14 iter:100] data loss:0.000135, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:14 iter:150] data loss:0.000120, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:03 - function:Train - INFO - [Train] epoch:14, lr:0.005586, total loss:0.000128
+2025-10-05 15:03 - function:Train - INFO - [Valid] epoch:14, MSE: 0.00011911238834727556
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:15 iter:50] data loss:0.000108, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:15 iter:100] data loss:0.000113, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:15 iter:150] data loss:0.000122, PDE loss:0.000003, physics loss:0.000004
+2025-10-05 15:03 - function:Train - INFO - [Train] epoch:15, lr:0.005862, total loss:0.000130
+2025-10-05 15:03 - function:Train - INFO - [Valid] epoch:15, MSE: 0.00011940013064304367
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:16 iter:50] data loss:0.000119, PDE loss:0.000004, physics loss:0.000003
+2025-10-05 15:03 - function:train_one_epoch - INFO - [epoch:16 iter:100] data loss:0.000111, PDE loss:0.000004, physics loss:0.000003
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:16 iter:150] data loss:0.000122, PDE loss:0.000003, physics loss:0.000003
+2025-10-05 15:04 - function:Train - INFO - [Train] epoch:16, lr:0.006138, total loss:0.000128
+2025-10-05 15:04 - function:Train - INFO - [Valid] epoch:16, MSE: 0.00011744836956495419
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:17 iter:50] data loss:0.000119, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:17 iter:100] data loss:0.000122, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:17 iter:150] data loss:0.000125, PDE loss:0.000005, physics loss:0.000003
+2025-10-05 15:04 - function:Train - INFO - [Train] epoch:17, lr:0.006414, total loss:0.000127
+2025-10-05 15:04 - function:Train - INFO - [Valid] epoch:17, MSE: 0.00012030215293634683
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:18 iter:50] data loss:0.000111, PDE loss:0.000010, physics loss:0.000003
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:18 iter:100] data loss:0.000122, PDE loss:0.000005, physics loss:0.000003
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:18 iter:150] data loss:0.000106, PDE loss:0.000009, physics loss:0.000002
+2025-10-05 15:04 - function:Train - INFO - [Train] epoch:18, lr:0.006690, total loss:0.000132
+2025-10-05 15:04 - function:Train - INFO - [Valid] epoch:18, MSE: 0.00011743813956854865
+2025-10-05 15:04 - function:train_one_epoch - INFO - [epoch:19 iter:50] data loss:0.000106, PDE loss:0.000000, physics loss:0.000004
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:19 iter:100] data loss:0.000111, PDE loss:0.000002, physics loss:0.000003
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:19 iter:150] data loss:0.000131, PDE loss:0.000007, physics loss:0.000003
+2025-10-05 15:05 - function:Train - INFO - [Train] epoch:19, lr:0.006966, total loss:0.000132
+2025-10-05 15:05 - function:Train - INFO - [Valid] epoch:19, MSE: 0.00011998308036709204
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:20 iter:50] data loss:0.000117, PDE loss:0.000002, physics loss:0.000005
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:20 iter:100] data loss:0.000118, PDE loss:0.000004, physics loss:0.000003
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:20 iter:150] data loss:0.000131, PDE loss:0.000001, physics loss:0.000004
+2025-10-05 15:05 - function:Train - INFO - [Train] epoch:20, lr:0.007241, total loss:0.000131
+2025-10-05 15:05 - function:Train - INFO - [Valid] epoch:20, MSE: 0.00011704314965754747
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:21 iter:50] data loss:0.000114, PDE loss:0.000002, physics loss:0.000004
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:21 iter:100] data loss:0.000119, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:05 - function:train_one_epoch - INFO - [epoch:21 iter:150] data loss:0.000117, PDE loss:0.000001, physics loss:0.000003
+2025-10-05 15:05 - function:Train - INFO - [Train] epoch:21, lr:0.007517, total loss:0.000129
+2025-10-05 15:05 - function:Train - INFO - [Valid] epoch:21, MSE: 0.00011846155393868685
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:22 iter:50] data loss:0.000114, PDE loss:0.000001, physics loss:0.000002
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:22 iter:100] data loss:0.000130, PDE loss:0.000007, physics loss:0.000003
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:22 iter:150] data loss:0.000116, PDE loss:0.000002, physics loss:0.000002
+2025-10-05 15:06 - function:Train - INFO - [Train] epoch:22, lr:0.007793, total loss:0.000129
+2025-10-05 15:06 - function:Train - INFO - [Valid] epoch:22, MSE: 0.00012463722669053823
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:23 iter:50] data loss:0.000099, PDE loss:0.000002, physics loss:0.000003
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:23 iter:100] data loss:0.000120, PDE loss:0.000005, physics loss:0.000004
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:23 iter:150] data loss:0.000124, PDE loss:0.000015, physics loss:0.000004
+2025-10-05 15:06 - function:Train - INFO - [Train] epoch:23, lr:0.008069, total loss:0.000129
+2025-10-05 15:06 - function:Train - INFO - [Valid] epoch:23, MSE: 0.00011998743866570294
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:24 iter:50] data loss:0.000123, PDE loss:0.000015, physics loss:0.000003
+2025-10-05 15:06 - function:train_one_epoch - INFO - [epoch:24 iter:100] data loss:0.000125, PDE loss:0.000007, physics loss:0.000003
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:24 iter:150] data loss:0.000117, PDE loss:0.000009, physics loss:0.000005
+2025-10-05 15:07 - function:Train - INFO - [Train] epoch:24, lr:0.008345, total loss:0.000132
+2025-10-05 15:07 - function:Train - INFO - [Valid] epoch:24, MSE: 0.00011740777699742466
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:25 iter:50] data loss:0.000116, PDE loss:0.000004, physics loss:0.000003
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:25 iter:100] data loss:0.000136, PDE loss:0.000002, physics loss:0.000003
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:25 iter:150] data loss:0.000113, PDE loss:0.000006, physics loss:0.000003
+2025-10-05 15:07 - function:Train - INFO - [Train] epoch:25, lr:0.008621, total loss:0.000133
+2025-10-05 15:07 - function:Train - INFO - [Valid] epoch:25, MSE: 0.00012741878163069487
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:26 iter:50] data loss:0.000117, PDE loss:0.000012, physics loss:0.000003
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:26 iter:100] data loss:0.000116, PDE loss:0.000018, physics loss:0.000003
+2025-10-05 15:07 - function:train_one_epoch - INFO - [epoch:26 iter:150] data loss:0.000114, PDE loss:0.000004, physics loss:0.000002
+2025-10-05 15:07 - function:Train - INFO - [Train] epoch:26, lr:0.008897, total loss:0.000129
+2025-10-05 15:07 - function:Train - INFO - [Valid] epoch:26, MSE: 0.00012482899182941765
+2025-10-05 15:08 - function:train_one_epoch - INFO - [epoch:27 iter:50] data loss:0.000162, PDE loss:0.000039, physics loss:0.000003
+2025-10-05 15:08 - function:train_one_epoch - INFO - [epoch:27 iter:100] data loss:0.000116, PDE loss:0.000003, physics loss:0.000003
+2025-10-05 15:08 - function:train_one_epoch - INFO - [epoch:27 iter:150] data loss:0.000134, PDE loss:0.000034, physics loss:0.000003
+2025-10-05 15:08 - function:Train - INFO - [Train] epoch:27, lr:0.009172, total loss:0.000134
+2025-10-05 15:08 - function:Train - INFO - [Valid] epoch:27, MSE: 0.0001183490821858868
+2025-10-05 15:08 - function:Train - INFO - early stop at epoch 27
+2025-10-05 15:23 - function:_save_args - INFO - Args:
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:23 - function:_save_args - INFO - Args:
+2025-10-05 15:23 - function:_save_args - INFO - Args:
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark1:2.4
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark1:2.4
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark2:2.4
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark2:2.4
+2025-10-05 15:23 - function:_save_args - INFO - Args:
+2025-10-05 15:23 - function:_save_args - INFO - Args:
+2025-10-05 15:23 - function:_save_args - INFO - Args:
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:23 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:29 - function:_save_args - INFO - Args:
+2025-10-05 15:29 - function:_save_args - INFO - Args:
+2025-10-05 15:29 - function:_save_args - INFO - Args:
+2025-10-05 15:29 - function:_save_args - INFO - Args:
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-10-05 15:29 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-10-05 15:34 - function:_save_args - INFO - Args:
+2025-10-05 15:34 - function:_save_args - INFO - Args:
+2025-10-05 15:34 - function:_save_args - INFO - Args:
+2025-10-05 15:34 - function:_save_args - INFO - Args:
+2025-10-05 15:34 - function:_save_args - INFO - Args:
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	data:HUST
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	batch_size:512
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	epochs:100
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	early_stop:20
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr:0.01
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	alpha:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	beta:1
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_hust_var2/
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/HUST results/autopikan_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_hust_var2/video_img_fit_2
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	save_fig:True
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-10-05 15:34 - function:_save_args - CRITICAL - 	mark2:2.5

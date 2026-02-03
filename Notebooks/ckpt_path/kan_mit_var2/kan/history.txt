@@ -1,0 +1,7 @@
+### Round 0 ###
+init => 0.0
+0.0 => best_fit => 0.1
+0.1 => fit => 0.2
+1.1 => auto_symbolic => 1.2
+2.2 => best_fit => 2.3
+2.3 => fit => 2.4

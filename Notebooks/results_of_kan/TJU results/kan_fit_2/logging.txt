@@ -1,0 +1,415 @@
+2025-06-18 01:36 - function:_save_args - INFO - Args:
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:36 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:70280783895249887232.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:001, data loss:149290653423069298688.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:81711969335223975936.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:002, data loss:151644774911253512192.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:79608640959065767936.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:003, data loss:149323593714832343040.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:80256893489100259328.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:004, data loss:189138183907325935616.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:81022998856585117696.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:005, data loss:147065167694322286592.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:81766214603497373696.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:006, data loss:146559210926126743552.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:78356879734415130624.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:007, data loss:147024059153582997504.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:79359164610087223296.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:008, data loss:149060045908708687872.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:78916195064734072832.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:009, data loss:148095074921753870336.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:77848097008930537472.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:010, data loss:145261704925230923776.000000
+2025-06-18 01:36 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:77049955196136079360.000000
+2025-06-18 01:36 - function:Train - INFO - [Valid] epoch:011, data loss:185743123814455181312.000000
+2025-06-18 01:37 - function:Train - INFO - early stop at epoch 11
+2025-06-18 01:41 - function:_save_args - INFO - Args:
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	mark:2.3
+2025-06-18 01:41 - function:_save_args - INFO - Args:
+2025-06-18 01:41 - function:_save_args - INFO - Args:
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:41 - function:_save_args - CRITICAL - 	mark:1.2
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:70280783895249887232.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:70280783895249887232.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:001, data loss:149290653423069298688.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:001, data loss:149290653423069298688.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:81711969335223975936.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:81711969335223975936.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:002, data loss:151644774911253512192.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:002, data loss:151644774911253512192.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:79608640959065767936.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:79608640959065767936.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:003, data loss:149323593714832343040.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:003, data loss:149323593714832343040.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:80256893489100259328.000000
+2025-06-18 01:41 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:80256893489100259328.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:004, data loss:189138183907325935616.000000
+2025-06-18 01:41 - function:Train - INFO - [Valid] epoch:004, data loss:189138183907325935616.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:81022998856585117696.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:81022998856585117696.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:005, data loss:147065167694322286592.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:005, data loss:147065167694322286592.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:81766214603497373696.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:81766214603497373696.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:006, data loss:146559210926126743552.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:006, data loss:146559210926126743552.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:78356879734415130624.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:78356879734415130624.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:007, data loss:147024059153582997504.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:007, data loss:147024059153582997504.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:79359164610087223296.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:79359164610087223296.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:008, data loss:149060045908708687872.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:008, data loss:149060045908708687872.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:78916195064734072832.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:78916195064734072832.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:009, data loss:148095074921753870336.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:009, data loss:148095074921753870336.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:77848097008930537472.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:77848097008930537472.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:010, data loss:145261704925230923776.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:010, data loss:145261704925230923776.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:77049955196136079360.000000
+2025-06-18 01:42 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:77049955196136079360.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:011, data loss:185743123814455181312.000000
+2025-06-18 01:42 - function:Train - INFO - [Valid] epoch:011, data loss:185743123814455181312.000000
+2025-06-18 01:42 - function:Train - INFO - early stop at epoch 11
+2025-06-18 01:42 - function:Train - INFO - early stop at epoch 11
+2025-06-18 01:42 - function:_save_args - INFO - Args:
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:42 - function:_save_args - CRITICAL - 	mark:2.3
+2025-06-18 01:44 - function:_save_args - INFO - Args:
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:44 - function:_save_args - CRITICAL - 	mark:0.2
+2025-06-18 01:45 - function:_save_args - INFO - Args:
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	mark:0.2
+2025-06-18 01:45 - function:_save_args - INFO - Args:
+2025-06-18 01:45 - function:_save_args - INFO - Args:
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	mark:1.3
+2025-06-18 01:45 - function:_save_args - CRITICAL - 	mark:1.3
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:168524809627057487872.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:001, lr:0.002000, data loss:168524809627057487872.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:001, data loss:377294274602700832768.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:001, data loss:377294274602700832768.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:203931262603378425856.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:002, lr:0.002276, data loss:203931262603378425856.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:002, data loss:385162396200661090304.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:002, data loss:385162396200661090304.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:199794429365540388864.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:003, lr:0.002552, data loss:199794429365540388864.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:003, data loss:380609081788536782848.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:003, data loss:380609081788536782848.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:201581801418135044096.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:004, lr:0.002828, data loss:201581801418135044096.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:004, data loss:483715420378378534912.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:004, data loss:483715420378378534912.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:203591405808233906176.000000
+2025-06-18 01:45 - function:Train - INFO - [Train] epoch:005, lr:0.003103, data loss:203591405808233906176.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:005, data loss:376126842923314905088.000000
+2025-06-18 01:45 - function:Train - INFO - [Valid] epoch:005, data loss:376126842923314905088.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:205685718098459590656.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:006, lr:0.003379, data loss:205685718098459590656.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:006, data loss:375372254690242002944.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:006, data loss:375372254690242002944.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:197653982204630204416.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:007, lr:0.003655, data loss:197653982204630204416.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:007, data loss:376607495714160771072.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:007, data loss:376607495714160771072.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:200630537105559912448.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:008, lr:0.003931, data loss:200630537105559912448.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:008, data loss:381964861355948965888.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:008, data loss:381964861355948965888.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:199537105414746472448.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:009, lr:0.004207, data loss:199537105414746472448.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:009, data loss:379788024412526084096.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:009, data loss:379788024412526084096.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:196611833538460680192.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:010, lr:0.004483, data loss:196611833538460680192.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:010, data loss:373026260998168772608.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:010, data loss:373026260998168772608.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:194776325219770236928.000000
+2025-06-18 01:46 - function:Train - INFO - [Train] epoch:011, lr:0.004759, data loss:194776325219770236928.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:011, data loss:477972194691465805824.000000
+2025-06-18 01:46 - function:Train - INFO - [Valid] epoch:011, data loss:477972194691465805824.000000
+2025-06-18 01:46 - function:Train - INFO - early stop at epoch 11
+2025-06-18 01:46 - function:Train - INFO - early stop at epoch 11
+2025-06-18 01:48 - function:_save_args - INFO - Args:
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	epochs:50
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_2
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_2
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 01:48 - function:_save_args - CRITICAL - 	mark:2.4
+2025-06-18 21:47 - function:_save_args - INFO - Args:
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-18 21:47 - function:_save_args - CRITICAL - 	mark:0.2
+2025-06-19 00:06 - function:_save_args - INFO - Args:
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	mark:0.1
+2025-06-19 00:06 - function:_save_args - INFO - Args:
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-19 00:06 - function:_save_args - CRITICAL - 	mark:0.2
+2025-06-19 00:08 - function:_save_args - INFO - Args:
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-19 00:08 - function:_save_args - CRITICAL - 	mark:1.3
+2025-06-19 00:15 - function:_save_args - INFO - Args:
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	model_name:KAN
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	data:TJU
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	batch_size:512
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	epochs:200
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	early_stop:20
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	lr:0.01
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/kan_tju_var2/
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_kan/TJU results/kan_fit_1
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	image_folder:../Images/kan_tju_var2/video_img_fit_1
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	save_fig:True
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	in_vars:['$x$', '$t$']
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	out_vars:['$u$']
+2025-06-19 00:15 - function:_save_args - CRITICAL - 	mark:0.2

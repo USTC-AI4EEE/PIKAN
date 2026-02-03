@@ -1,0 +1,285 @@
+'''
+MIT数据集的结果分析
+
+English:
+    This file is used to analyze the results of the MIT dataset.
+'''
+import pandas as pd
+import numpy as np
+import os
+# from utils.util import eval_metrix
+# import matplotlib.pyplot as plt
+# import scienceplots
+# plt.style.use('science')
+
+from sklearn import metrics
+def eval_metrix(true_label,pred_label):
+    MAE = metrics.mean_absolute_error(true_label,pred_label)
+    MAPE = metrics.mean_absolute_percentage_error(true_label,pred_label)
+    MSE = metrics.mean_squared_error(true_label,pred_label)
+    RMSE = np.sqrt(metrics.mean_squared_error(true_label,pred_label))
+    R2 = metrics.r2_score(true_label, pred_label)
+
+    return [MAE,MAPE,MSE,RMSE,R2]
+
+class Results:
+    def __init__(self,root='../results/MIT results/'):
+        self.root = root
+        self.experiments = os.listdir(root)
+        self.subfolder = None
+        self.log_dir = None
+        self.pred_label = None
+        self.true_label = None
+        self._update_experiments(1)
+
+    def _update_experiments(self,experiment=1,subfolder='best_results'):
+        self.subfolder = 'Experiment' + str(experiment) + '/' + subfolder
+        self.log_dir = os.path.join(self.root, self.subfolder,'logging.txt')
+        self.pred_label = os.path.join(self.root, self.subfolder,'pred_label.npy')
+        self.true_label = os.path.join(self.root, self.subfolder,'true_label.npy')
+
+    def parser_log(self):
+        '''
+        解析train过程中产生的log文件，获取里面的数据
+        English:
+            Parse the log file generated during the training process to obtain the data
+        :return: dict
+        '''
+        data_dict = {}
+
+        with open(self.log_dir, 'r') as f:
+            lines = f.readlines()
+
+        # 解析超参数，logging等级为CRITICAL
+        # Parse hyperparameters, logging level is CRITICAL
+        for line in lines:
+            if 'CRITICAL' in line:
+                params = line.split('\t')[-1].split('\n')[0]
+                k, v = params.split(':')
+                data_dict[k] = v
+
+        # 解析train/valid/test过程中的loss
+        # Parse the loss during the train/valid/test process
+        train_data_loss = []
+        train_PDE_loss = []
+        train_phy_loss = []
+        train_total_loss = []
+        valid_data_loss = []
+
+        test_mse = []
+        test_epoch = []
+
+        for i in range(len(lines)):
+            line = lines[i]
+            if '[train] epoch:1 iter:1 data' in line:
+                # train_data_loss.append(float(line.split('data loss:')[1].split(',')[0]))
+                # train_PDE_loss.append(float(line.split('PDE loss:')[1].split(',')[0]))
+                # train_phy_loss.append(float(line.split('physics loss:')[1].split(',')[0]))
+                train_total_loss.append(float(line.split('total loss:')[1].split('\n')[0]))
+            elif '[Train]' in line:
+                # train_data_loss.append(float(line.split('data loss:')[1].split(',')[0]))
+                # train_PDE_loss.append(float(line.split('PDE loss:')[1].split(',')[0]))
+                # train_phy_loss.append(float(line.split('physics loss:')[1].split(',')[0]))
+                train_total_loss.append(float(line.split('total loss:')[1].split('\n')[0]))
+            elif '[Valid]' in line:
+                valid_data_loss.append(float(line.split('MSE:')[1].split('\n')[0]))
+            elif '[Test]' in line:
+                test_mse.append(float(line.split('MSE:')[1].split(',')[0]))
+                test_epoch.append(int(lines[i - 1].split('epoch:')[1].split(',')[0]))
+
+        # data_dict['train_data_loss'] = train_data_loss
+        # data_dict['train_PDE_loss'] = train_PDE_loss
+        # data_dict['train_phy_loss'] = train_phy_loss
+        data_dict['train_total_loss'] = train_total_loss
+        data_dict['valid_data_loss'] = valid_data_loss
+        data_dict['test_mse'] = test_mse
+        data_dict['test_epoch'] = test_epoch
+
+        # 解析数据路径
+        # Parse the data path
+        line1 = lines[1]
+        if '.csv' in line1:
+            line = line1[1:-2]
+            line_list = line.replace('data/MIT data/', '').replace('.csv','').replace('\'','').split(', ')
+            data_dict['IDs_1'] = line_list
+
+        line2 = lines[3]
+        if '.csv' in line2:
+            line = line2[1:-2]
+            line_list = line.replace('data/MIT data/', '').replace('.csv', '').replace('\'', '').split(', ')
+            for i in range(len(line_list)):
+                line_list[i] = line_list[i].split('\\')[-1]
+            data_dict['IDs_2'] = line_list
+
+        return data_dict
+
+    def parser_label(self):
+        '''
+        解析预测结果
+        English:
+            Parse the prediction results
+        :return:
+        '''
+        pred_label = np.load(self.pred_label).reshape(-1)
+        true_label = np.load(self.true_label).reshape(-1)
+        [MAE, MAPE, MSE, RMSE, R2] = eval_metrix(pred_label, true_label)
+        # plt.figure(figsize=(6, 4))
+        # plt.plot(true_label, label='true label')
+        # plt.plot(pred_label, label='pred label')
+        # plt.legend()
+        # plt.show()
+
+
+        # 用来保存每个电池的预测结果
+        # Save the prediction results of each battery
+        pred_label_list = []
+        true_label_list = []
+        MAE_list = []
+        MAPE_list = []
+        MSE_list = []
+        RMSE_list = []
+        R2_list = []
+
+        diff = np.diff(true_label)
+        split_point = np.where(diff>0.05)[0]
+        local_minima = np.concatenate((split_point,[len(true_label)]))
+
+        start = 0
+        end = 0
+        for i in range(len(local_minima)):
+            end = local_minima[i]
+            pred_i = pred_label[start:end]
+            true_i = true_label[start:end]
+            [MAE_i, MAPE_i, MSE_i, RMSE_i, R2_i] = eval_metrix(pred_i, true_i)
+            # print('battery {} MAE:{:.4f}, MAPE:{:.4f}, MSE:{:.6f}, RMSE:{:.4f}, R2:{:.4f}'.format(i+1,MAE_i, MAPE_i, MSE_i, RMSE_i,R2_i))
+            start = end+1
+
+            pred_label_list.append(pred_i)
+            true_label_list.append(true_i)
+            MAE_list.append(MAE_i)
+            MAPE_list.append(MAPE_i)
+            MSE_list.append(MSE_i)
+            RMSE_list.append(RMSE_i)
+            R2_list.append(R2_i)
+        #print('Mean  MAE:{:.4f}, MAPE:{:.4f}, MSE:{:.6f}, RMSE:{:.4f}, R2:{:.4f}'.format(MAE, MAPE, MSE, RMSE,R2))
+        results_dict = {}
+        results_dict['pred_label'] = pred_label_list
+        results_dict['true_label'] = true_label_list
+        results_dict['MAE'] = MAE_list
+        results_dict['MAPE'] = MAPE_list
+        results_dict['MSE'] = MSE_list
+        results_dict['RMSE'] = RMSE_list
+        results_dict['R2'] = R2_list
+        return results_dict
+
+
+    def get_test_results(self,e=1,s='best_results'):
+        '''
+        解析训练和测试数据中的电池id
+        English:
+            Parse the battery id in the training and test data
+        :param e: experiment id
+        :param s: subfolder name
+        :return:
+        '''
+        self._update_experiments(experiment=e,subfolder=s)
+        # log_dict = self.parser_log()
+        results_dict = self.parser_label()
+        # results_dict['channel'] = log_dict['IDs_2']
+        return results_dict
+
+    def get_battery_average(self):
+        df_mean_values = []
+        for e in range(1,11):
+            res = self.get_test_results(e=e)
+            df_i = pd.DataFrame(res)
+            df_i = df_i[['MAE','MAPE','RMSE','R2']]
+            df_i_mean = df_i.mean(axis=0)
+            df_mean_values.append(df_i_mean.values)
+        df_mean_values = np.array(df_mean_values)
+        df_mean = pd.DataFrame(df_mean_values,columns=['MAE','MAPE','RMSE','R2'])
+        df_mean.insert(0,'experiment',range(1,11))
+        print(df_mean)
+        mean = df_mean.mean(axis=0)
+        print(f'mean:  MAPE:{mean[2]:.4f}, RMSE:{mean[3]:.4f}')
+        return df_mean
+
+    def get_group_average(self,total_group=49):
+        s_df_mean_values = []
+        for group in range(1, 1+total_group):
+            s = 'group' + str(group)        
+            df_mean_values = []
+            for e in range(1,11):
+                res = self.get_test_results(e=e,s=s)
+                df_i = pd.DataFrame(res)
+                df_i = df_i[['MAE','MAPE','RMSE','R2']]
+                df_i_mean = df_i.mean(axis=0)
+                df_mean_values.append(df_i_mean.values)
+            df_mean_values = np.array(df_mean_values)
+            df_mean = pd.DataFrame(df_mean_values,columns=['MAE','MAPE','RMSE','R2'])
+            df_mean.insert(0,'experiment',range(1,11))
+            s_df_mean = df_mean[['MAE', 'MAPE', 'RMSE']].mean(axis=0)
+            s_df_mean_values.append(s_df_mean.values)
+        s_df_mean_values = np.array(s_df_mean_values)
+        s_df_mean = pd.DataFrame(s_df_mean_values, columns=['MAE', 'MAPE', 'RMSE'])
+        s_df_mean.insert(0, column='group', value=np.arange(1, 1+total_group))
+        return s_df_mean
+
+    def get_experiment_average(self):
+        '''
+        分别获取每个测试电池在所有实验中的平均值
+        English:
+            Get the average value of each test battery in all experiments
+        :return: dataframe，每一行是一个电池在10次实验中的平均值 (each row is the average value of a battery in 10 experiments)
+        '''
+        df_value_list = []
+        for i in range(1, 11):
+            res = self.get_test_results(i)
+            df = pd.DataFrame(res)
+            df = df[['channel', 'MAE', 'MAPE', 'RMSE', 'R2']]
+            df = df.sort_values(by='channel')
+            df.reset_index(drop=True, inplace=True)
+            df_value_list.append(df[['MAE', 'MAPE', 'RMSE', 'R2']].values)
+        channel = df['channel']
+        columns = ['MAE', 'MAPE', 'RMSE', 'R2']
+
+        np_array = np.array(df_value_list)
+        np_mean = np.mean(np_array, axis=0)
+        df_mean = pd.DataFrame(np_mean, columns=columns)
+        df_mean.insert(0, column='channel', value=channel)
+        # df_mean['channel'] = df_mean['channel'].astype(str)
+        df_mean['channel'] = df_mean['channel']
+        print(df_mean)
+        return df_mean
+
+
+
+if __name__ == '__main__':
+
+    model_name = 'PIKAN_opt'
+
+    # MIT soh-estimation
+    root = f'results_soh-estimation/{model_name}/MIT results/'
+    save_folder = f'results_soh-estimation/processed_results/{model_name}/'
+    if not os.path.exists(save_folder):
+        os.makedirs(save_folder)
+    writer = pd.ExcelWriter(f'results_soh-estimation/processed_results/{model_name}/{model_name}_MIT_results_group_mean.xlsx')
+    results = Results(root)
+    df_group_mean = results.get_group_average(total_group=49)
+    df_group_mean.to_excel(writer, sheet_name='group_mean_0', index=False)
+    writer._save()
+
+    # # MIT small-sample
+    # for n in [1,2]:
+    #     root = f'results_small-sample/{model_name}/MIT results (small sample {n})/'
+    #     save_folder = f'results_small-sample/processed_results/{model_name}/'
+    #     if not os.path.exists(save_folder):
+    #         os.makedirs(save_folder)
+    #     writer = pd.ExcelWriter(f'results_small-sample/processed_results/{model_name}/{model_name}_MIT_results_small_sample_{n}_group_mean.xlsx')
+    #     results = Results(root)
+    #     df_group_mean = results.get_group_average(total_group=49)
+    #     df_group_mean.to_excel(writer, sheet_name='group_mean_0', index=False)
+    #     writer._save()
+
+
+

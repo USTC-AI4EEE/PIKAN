@@ -1,0 +1,38 @@
+affine_trainable: false
+auto_save: true
+base_fun_name: silu
+ckpt_path: ../Notebooks/ckpt_path/pikan_tju_var2/solution_u/
+device: cuda:3
+grid: 3
+grid_eps: 0.02
+grid_range:
+- -1
+- 1
+k: 3
+mult_arity: 2
+round: 5
+sb_trainable: true
+sp_trainable: true
+state_id: 8
+symbolic.funs_name.0:
+- - arcsinh
+  - erf
+- - '0'
+  - sinc
+- - bessel_j0
+  - sinh
+- - arcsinh
+  - '0'
+symbolic.funs_name.1:
+- - sinh
+  - arcsinh
+  - sinh
+  - cosh
+symbolic_enabled: true
+width:
+- - 2
+  - 0
+- - 4
+  - 0
+- - 1
+  - 0

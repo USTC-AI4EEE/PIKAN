@@ -1,0 +1,390 @@
+2025-07-01 18:30 - function:_save_args - INFO - Args:
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	mark1:1.3
+2025-07-01 18:30 - function:_save_args - CRITICAL - 	mark2:1.3
+2025-07-01 18:30 - function:Train - INFO - [Train] epoch:1, lr:0.002000, total loss:0.005727
+2025-07-01 18:30 - function:Train - INFO - [Valid] epoch:1, MSE: 6.552615377586335e-05
+2025-07-01 18:30 - function:Train - INFO - [Test] MSE: 0.00007474, MAE: 0.007410, MAPE: 0.009328, RMSE: 0.008645
+2025-07-01 18:30 - function:Train - INFO - [Train] epoch:2, lr:0.002276, total loss:0.000815
+2025-07-01 18:30 - function:Train - INFO - [Valid] epoch:2, MSE: 0.0008811293519102037
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:3, lr:0.002552, total loss:0.000334
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:3, MSE: 0.0001454693265259266
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:4, lr:0.002828, total loss:0.000197
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:4, MSE: 5.197030259296298e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00004727, MAE: 0.005761, MAPE: 0.007159, RMSE: 0.006876
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:5, lr:0.003103, total loss:0.000080
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:5, MSE: 6.553796265507117e-05
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:6, lr:0.003379, total loss:0.000057
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:6, MSE: 4.962084494763985e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00004464, MAE: 0.005653, MAPE: 0.007024, RMSE: 0.006681
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:7, lr:0.003655, total loss:0.000048
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:7, MSE: 4.0532595448894426e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00005672, MAE: 0.006464, MAPE: 0.008179, RMSE: 0.007531
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:8, lr:0.003931, total loss:0.000041
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:8, MSE: 3.671415470307693e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00003921, MAE: 0.005564, MAPE: 0.006931, RMSE: 0.006262
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:9, lr:0.004207, total loss:0.000041
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:9, MSE: 3.4773311199387535e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00004577, MAE: 0.006043, MAPE: 0.007593, RMSE: 0.006766
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:10, lr:0.004483, total loss:0.000039
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:10, MSE: 3.343729622429237e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00003934, MAE: 0.005727, MAPE: 0.007158, RMSE: 0.006272
+2025-07-01 18:31 - function:Train - INFO - [Train] epoch:11, lr:0.004759, total loss:0.000038
+2025-07-01 18:31 - function:Train - INFO - [Valid] epoch:11, MSE: 3.256701893405989e-05
+2025-07-01 18:31 - function:Train - INFO - [Test] MSE: 0.00004110, MAE: 0.005907, MAPE: 0.007412, RMSE: 0.006411
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:12, lr:0.005034, total loss:0.000038
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:12, MSE: 3.219117206754163e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00004060, MAE: 0.005904, MAPE: 0.007412, RMSE: 0.006371
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:13, lr:0.005310, total loss:0.000037
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:13, MSE: 3.192666918039322e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00004023, MAE: 0.005907, MAPE: 0.007417, RMSE: 0.006343
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:14, lr:0.005586, total loss:0.000036
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:14, MSE: 3.1853232940193266e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00004207, MAE: 0.006055, MAPE: 0.007628, RMSE: 0.006486
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:15, lr:0.005862, total loss:0.000037
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:15, MSE: 3.165249654557556e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00003972, MAE: 0.005910, MAPE: 0.007426, RMSE: 0.006303
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:16, lr:0.006138, total loss:0.000036
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:16, MSE: 3.161548374919221e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00003987, MAE: 0.005935, MAPE: 0.007461, RMSE: 0.006315
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:17, lr:0.006414, total loss:0.000036
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:17, MSE: 3.1809577194508165e-05
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:18, lr:0.006690, total loss:0.000036
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:18, MSE: 3.15703364321962e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00004228, MAE: 0.006072, MAPE: 0.007650, RMSE: 0.006502
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:19, lr:0.006966, total loss:0.000036
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:19, MSE: 3.134427242912352e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00004131, MAE: 0.006052, MAPE: 0.007625, RMSE: 0.006427
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:20, lr:0.007241, total loss:0.000035
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:20, MSE: 3.1275667424779385e-05
+2025-07-01 18:32 - function:Train - INFO - [Test] MSE: 0.00003966, MAE: 0.005917, MAPE: 0.007433, RMSE: 0.006297
+2025-07-01 18:32 - function:Train - INFO - [Train] epoch:21, lr:0.007517, total loss:0.000035
+2025-07-01 18:32 - function:Train - INFO - [Valid] epoch:21, MSE: 3.1345894967671484e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:22, lr:0.007793, total loss:0.000036
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:22, MSE: 3.168523107888177e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:23, lr:0.008069, total loss:0.000036
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:23, MSE: 3.167463728459552e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:24, lr:0.008345, total loss:0.000036
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:24, MSE: 3.150157499476336e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:25, lr:0.008621, total loss:0.000035
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:25, MSE: 3.160926644341089e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:26, lr:0.008897, total loss:0.000035
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:26, MSE: 3.1249863241100684e-05
+2025-07-01 18:33 - function:Train - INFO - [Test] MSE: 0.00004011, MAE: 0.005941, MAPE: 0.007462, RMSE: 0.006334
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:27, lr:0.009172, total loss:0.000035
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:27, MSE: 3.1093735742615536e-05
+2025-07-01 18:33 - function:Train - INFO - [Test] MSE: 0.00004032, MAE: 0.005988, MAPE: 0.007531, RMSE: 0.006350
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:28, lr:0.009448, total loss:0.000037
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:28, MSE: 3.109671160927974e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:29, lr:0.009724, total loss:0.000043
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:29, MSE: 3.1649626180296764e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:30, lr:0.010000, total loss:0.000057
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:30, MSE: 3.1481864425586537e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:31, lr:0.010000, total loss:0.000048
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:31, MSE: 3.174161247443408e-05
+2025-07-01 18:33 - function:Train - INFO - [Train] epoch:32, lr:0.009995, total loss:0.000045
+2025-07-01 18:33 - function:Train - INFO - [Valid] epoch:32, MSE: 3.130827099084854e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:33, lr:0.009980, total loss:0.000037
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:33, MSE: 3.150402335450053e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:34, lr:0.009956, total loss:0.000038
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:34, MSE: 3.225044201826677e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:35, lr:0.009921, total loss:0.000035
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:35, MSE: 3.126337833236903e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:36, lr:0.009877, total loss:0.000035
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:36, MSE: 3.1417759601026773e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:37, lr:0.009823, total loss:0.000035
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:37, MSE: 3.252878013881855e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:38, lr:0.009760, total loss:0.000038
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:38, MSE: 3.168304465361871e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:39, lr:0.009688, total loss:0.000038
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:39, MSE: 3.203892265446484e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:40, lr:0.009606, total loss:0.000039
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:40, MSE: 3.257612115703523e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:41, lr:0.009515, total loss:0.000051
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:41, MSE: 3.208227644790895e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:42, lr:0.009415, total loss:0.000040
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:42, MSE: 3.11924159177579e-05
+2025-07-01 18:34 - function:Train - INFO - [Train] epoch:43, lr:0.009306, total loss:0.000038
+2025-07-01 18:34 - function:Train - INFO - [Valid] epoch:43, MSE: 3.128286698483862e-05
+2025-07-01 18:35 - function:Train - INFO - [Train] epoch:44, lr:0.009189, total loss:0.000035
+2025-07-01 18:35 - function:Train - INFO - [Valid] epoch:44, MSE: 3.168552211718634e-05
+2025-07-01 18:35 - function:Train - INFO - [Train] epoch:45, lr:0.009064, total loss:0.000035
+2025-07-01 18:35 - function:Train - INFO - [Valid] epoch:45, MSE: 3.152247882098891e-05
+2025-07-01 18:35 - function:Train - INFO - [Train] epoch:46, lr:0.008931, total loss:0.000035
+2025-07-01 18:35 - function:Train - INFO - [Valid] epoch:46, MSE: 3.167541217408143e-05
+2025-07-01 18:35 - function:Train - INFO - [Train] epoch:47, lr:0.008790, total loss:0.000035
+2025-07-01 18:35 - function:Train - INFO - [Valid] epoch:47, MSE: 3.1922172638587654e-05
+2025-07-01 18:35 - function:Train - INFO - [Train] epoch:48, lr:0.008642, total loss:0.000037
+2025-07-01 18:35 - function:Train - INFO - [Valid] epoch:48, MSE: 3.387101969565265e-05
+2025-07-01 18:35 - function:Train - INFO - early stop at epoch 48
+2025-07-01 18:40 - function:_save_args - INFO - Args:
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	mark1:2.4
+2025-07-01 18:40 - function:_save_args - CRITICAL - 	mark2:2.4
+2025-07-01 18:41 - function:_save_args - INFO - Args:
+2025-07-01 18:41 - function:_save_args - INFO - Args:
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-07-01 18:41 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-07-01 18:45 - function:_save_args - INFO - Args:
+2025-07-01 18:45 - function:_save_args - INFO - Args:
+2025-07-01 18:45 - function:_save_args - INFO - Args:
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	mark1:3.6
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-07-01 18:45 - function:_save_args - CRITICAL - 	mark2:3.7
+2025-07-01 18:52 - function:_save_args - INFO - Args:
+2025-07-01 18:52 - function:_save_args - INFO - Args:
+2025-07-01 18:52 - function:_save_args - INFO - Args:
+2025-07-01 18:52 - function:_save_args - INFO - Args:
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	model_name:AutoPIKAN
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	data:TJU
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	batch_size:512
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	normalization_method:min-max
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	epochs:100
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	early_stop:20
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_epochs:30
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	warmup_lr:0.002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr:0.01
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	final_lr:0.0002
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	lr_F:0.001
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	alpha:10
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	beta:0.1
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	ckpt_path:../Notebooks/ckpt_path/autopikan_tju_var2/
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	log_dir:logging.txt
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_folder:../Notebooks/results_of_autopikan/TJU results/autopikan_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	image_folder:../Images/autopikan_tju_var2/video_img_fit_2
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	save_fig:True
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_in_vars:['$x$', '$t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	f_out_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_in_vars:['$u$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	g_out_vars:['$u_t$']
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark1:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark2:2.5
+2025-07-01 18:52 - function:_save_args - CRITICAL - 	mark2:2.5

@@ -1,0 +1,38 @@
+affine_trainable: false
+auto_save: true
+base_fun_name: silu
+ckpt_path: ../Notebooks/ckpt_path/autopikan_hust_var2/solution_u/
+device: cuda:3
+grid: 3
+grid_eps: 0.02
+grid_range:
+- -1
+- 1
+k: 3
+mult_arity: 2
+round: 3
+sb_trainable: true
+sp_trainable: true
+state_id: 6
+symbolic.funs_name.0:
+- - torch.special.sinc
+  - torch.special.bessel_j0
+- - torch.arcsinh
+  - torch.special.bessel_j0
+- - torch.special.erf
+  - torch.sinh
+- - torch.arcsinh
+  - torch.special.bessel_j0
+symbolic.funs_name.1:
+- - torch.arcsinh
+  - torch.sinh
+  - torch.cosh
+  - torch.arcsinh
+symbolic_enabled: true
+width:
+- - 2
+  - 0
+- - 4
+  - 0
+- - 1
+  - 0

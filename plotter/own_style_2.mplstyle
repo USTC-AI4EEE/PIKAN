@@ -1,0 +1,8 @@
+axes.titlesize : 16
+axes.labelsize : 14
+axes.titleweight: bold
+axes.labelweight: bold
+lines.linewidth : 2
+xtick.labelsize : 12
+ytick.labelsize : 12
+font.weight : bold
