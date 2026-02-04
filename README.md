@@ -1,4 +1,4 @@
-Physics-informed and interpretable state of health estimation framework for lithium-ion batteries
+# Physics-informed and interpretable state of health estimation framework for lithium-ion batteries
 
 > **Authors:**
 Lei Liu, Jiahui Huang, Bo Peng, Ying Li, Peng Wang, Xianhao Wang, Hongwei Zhao, Bin Li.
@@ -9,25 +9,26 @@ Website: .
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
-- [1. Abstract](#1-abstract)
-- [2. PIKAN's architecture](#2-pikans-architecture)
-- [3. Environment configuration](#3-environment-configuration)
-  - [3.1. Create environment](#31-create-environment)
-  - [3.2. Activate environment](#32-activate-environment)
-- [4. Datasets](#4-datasets)
-- [5. Usage](#5-usage)
-  - [5.1. Model training and validation](#51-model-training-and-validation)
-    - [5.1.1. Regular and small-sample scenarios](#511-regular-and-small-sample-scenarios)
-    - [5.1.2. Zero-shot and few-shot transfer scenarios](#512-zero-shot-and-few-shot-transfer-scenarios)
-  - [5.2. Model performance evaluation](#52-model-performance-evaluation)
-    - [5.2.1. Regular and small-sample scenarios](#521-regular-and-small-sample-scenarios)
-    - [5.2.2. Zero-shot and few-shot transfer scenarios](#522-zero-shot-and-few-shot-transfer-scenarios)
-  - [5.3. Model interpretability analysis](#53-model-interpretability-analysis)
-  - [5.4. Visualization](#54-visualization)
-- [6. Experimental procedures](#6-experimental-procedures)
-- [7. Acknowledgments](#7-acknowledgments)
-- [8. Citation](#8-citation)
+- [Physics-informed and interpretable state of health estimation framework for lithium-ion batteries](#physics-informed-and-interpretable-state-of-health-estimation-framework-for-lithium-ion-batteries)
+  - [Table of contents](#table-of-contents)
+  - [1. Abstract](#1-abstract)
+  - [2. PIKAN's architecture](#2-pikans-architecture)
+  - [3. Environment configuration](#3-environment-configuration)
+    - [3.1. Create environment](#31-create-environment)
+    - [3.2. Activate environment](#32-activate-environment)
+  - [4. Datasets](#4-datasets)
+  - [5. Usage](#5-usage)
+    - [5.1. Model training and validation](#51-model-training-and-validation)
+      - [5.1.1. Regular and small-sample scenarios](#511-regular-and-small-sample-scenarios)
+      - [5.1.2. Zero-shot and few-shot transfer scenarios](#512-zero-shot-and-few-shot-transfer-scenarios)
+    - [5.2. Model performance evaluation](#52-model-performance-evaluation)
+      - [5.2.1. Regular and small-sample scenarios](#521-regular-and-small-sample-scenarios)
+      - [5.2.2. Zero-shot and few-shot transfer scenarios](#522-zero-shot-and-few-shot-transfer-scenarios)
+    - [5.3. Model interpretability analysis](#53-model-interpretability-analysis)
+    - [5.4. Visualization](#54-visualization)
+  - [6. Experimental procedures](#6-experimental-procedures)
+  - [7. Acknowledgments](#7-acknowledgments)
+  - [8. Citation](#8-citation)
 
 ## 1. Abstract
 
@@ -35,7 +36,7 @@ Accurate state-of-health (SOH) estimation is critical for the safety of lithium-
 
 ## 2. PIKAN's architecture
 
-![PIKAN's architecture](Charts\PIKAN_architecture.jpg "PIKAN's architecture")
+![PIKAN's architecture](Charts/PIKAN_architecture.jpg "PIKAN's architecture")
 
 The overall architecture of PIKAN. (a) The structure of SHEM and DDMM, and the design of the composite loss function. (b) The schematic diagram of symbolic regression technology based on KAN.
 
@@ -54,7 +55,7 @@ conda activate pikan
 
 ## 4. Datasets
 
-![datasets](Charts\Datasets.jpg "datasets")
+![datasets](Charts/Datasets.jpg "datasets")
 
 The capacity degradation curves of the battery datasets. (a) XJTU dataset, (b) TJU dataset, (c) MIT dataset, (d) HUST dataset. The scales on the color bars of
 panel (c) and (d) indicate the total number of cycles for each battery cell.
@@ -135,7 +136,7 @@ python plotter/Figure_1a.py
 
 ## 6. Experimental procedures
 
-![experimental framework](Charts\framework.jpg "experimental framework")
+![experimental framework](Charts/framework.jpg "experimental framework")
 
 The overall experimental procedures for the proposed PIKAN method.
 
