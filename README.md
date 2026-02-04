@@ -1,149 +1,154 @@
-# 基于物理信息柯尔莫哥洛夫-阿诺德网络(PIKAN)的SOH估计
+Physics-informed and interpretable state of health estimation framework for lithium-ion batteries
 
-PIKAN是一个先进的电池健康状态(SOH)估计框架，它创新性地结合了物理信息神经网络(PINNs)和柯尔莫哥洛夫-阿诺德网络(KANs)的优势，在多个电池数据集上实现了精确且可解释的SOH预测。
+> **Authors:**
+Lei Liu, Jiahui Huang, Bo Peng, Ying Li, Peng Wang, Xianhao Wang, Hongwei Zhao, Bin Li.
 
-## 目录
+This repo contains the code and data from our paper published in Journal of Energy Storage.
 
-- [项目概述](#项目概述)
-- [主要特性](#主要特性)
-- [技术栈](#技术栈)
-- [安装](#安装)
-- [数据集](#数据集)
-- [使用方法](#使用方法)
-- [实验结果](#实验结果)
-- [可视化](#可视化)
-- [贡献](#贡献)
-- [许可证](#许可证)
+Website: .
 
-## 项目概述
+## Table of contents
 
-电池健康状态(SOH)估计是电池管理系统(BMS)中的关键任务。PIKAN引入了一种新颖的方法，该方法：
+- [Table of contents](#table-of-contents)
+- [1. Abstract](#1-abstract)
+- [2. PIKAN's architecture](#2-pikans-architecture)
+- [3. Environment configuration](#3-environment-configuration)
+  - [3.1. Create environment](#31-create-environment)
+  - [3.2. Activate environment](#32-activate-environment)
+- [4. Datasets](#4-datasets)
+- [5. Usage](#5-usage)
+  - [5.1. Model training and validation](#51-model-training-and-validation)
+    - [5.1.1. Regular and small-sample scenarios](#511-regular-and-small-sample-scenarios)
+    - [5.1.2. Zero-shot and few-shot transfer scenarios](#512-zero-shot-and-few-shot-transfer-scenarios)
+  - [5.2. Model performance evaluation](#52-model-performance-evaluation)
+    - [5.2.1. Regular and small-sample scenarios](#521-regular-and-small-sample-scenarios)
+    - [5.2.2. Zero-shot and few-shot transfer scenarios](#522-zero-shot-and-few-shot-transfer-scenarios)
+  - [5.3. Model interpretability analysis](#53-model-interpretability-analysis)
+  - [5.4. Visualization](#54-visualization)
+- [6. Experimental procedures](#6-experimental-procedures)
+- [7. Acknowledgments](#7-acknowledgments)
+- [8. Citation](#8-citation)
 
-- 将物理信息约束与数据驱动学习相结合
-- 利用柯尔莫哥洛夫-阿诺德网络增强函数逼近能力
-- 通过符号回归提供可解释的数学表达式
-- 在多个电池数据集上实现了最先进的性能
+## 1. Abstract
 
-## 主要特性
+Accurate state-of-health (SOH) estimation is critical for the safety of lithium-ion batteries. Current data-driven methods face three key challenges: limited accuracy under data scarcity, insufficient physical consistency, and poor interpretability. This study proposes the Physics-Informed Kolmogorov-Arnold Network (PIKAN), establishing a novel interpretable symbiotic co-evolution mechanism that combines and jointly optimizes SOH estimation and degradation mechanism discovery. PIKAN integrates three innovations: (1) the State of Health Estimation Module (SHEM) utilizes the functional decomposition and symbolic representation capabilities of KAN to achieve accurate and interpretable estimation; (2) the Degradation Dynamics Modeling Module (DDMM) uses KAN as a general approximator to adaptively discover degradation dynamical equations without predefined forms; (3) these modules interact bidirectionally, where SHEM provides real-time battery state to guide the equation discovery of DDMM, while DDMM regularizes the output of SHEM through physical constraints, achieving self-regularization and synergistic learning. Comprehensive experiments across four datasets demonstrate that PIKAN outperforms state-of-the-art methods in conventional and transfer scenarios, with maximum 63.4% RMSE reduction in small-sample scenarios. Crucially, symbolic regression transforms the learned model into explicit analytical expressions, revealing the intrinsic decision-making logic of SOH mapping and degradation dynamics. Under mechanism guidance, discovered degradation equations exhibit structural similarity to existing electrochemical models, bridging data-driven discovery with physical theory. The analytical expressions obtained from the PIKAN framework provide actionable insights for practical battery management systems (BMS) and exhibit a certain degree of cross-battery transferability. This study offers a physics-informed interpretable paradigm for intelligent battery management.
 
-- **物理信息学习**：将电池物理定律整合到神经网络训练过程中
-- **柯尔莫哥洛夫-阿诺德网络**：利用KANs提高函数逼近能力
-- **多数据集支持**：适用于HUST、MIT、TJU和XJTU等多种电池数据集
-- **符号回归**：从训练模型中提取可解释的数学表达式
-- **全面的可视化**：生成详细的图表用于结果分析
-- **高效优化算法**：集成多种优化器以提升训练效率
+## 2. PIKAN's architecture
 
-## 技术栈
+![PIKAN's architecture](Charts\PIKAN_architecture.jpg "PIKAN's architecture")
 
-- Python 3.8+
-- PyTorch（深度学习框架）
-- NumPy（数值计算）
-- Matplotlib & Seaborn（数据可视化）
-- Pandas（数据处理）
-- SciPy（科学计算）
-- scikit-learn（机器学习库）
+The overall architecture of PIKAN. (a) The structure of SHEM and DDMM, and the design of the composite loss function. (b) The schematic diagram of symbolic regression technology based on KAN.
 
-## 安装
+## 3. Environment configuration
 
-1. 克隆仓库：
-   ```bash
-   git clone https://gitee.com/huangjh168/pikan.git
-   cd PIKAN
-   ```
+### 3.1. Create environment
 
-2. 安装所需依赖：
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+conda env create -f pikan.yaml
+```
+### 3.2. Activate environment
 
-3. 确保安装了PyTorch并启用了适当的CUDA支持（如果使用GPU加速）。
+```bash
+conda activate pikan
+```
 
-## 数据集
+## 4. Datasets
 
-本项目使用了多个公开的电池数据集来验证模型性能：
+![datasets](Charts\Datasets.jpg "datasets")
 
-1. HUST电池数据集
-- 包含多种电池类型和工况的数据
-- 提供电压、电流、温度等多维特征
-- 适用于动态工况下的SOH估计
+The capacity degradation curves of the battery datasets. (a) XJTU dataset, (b) TJU dataset, (c) MIT dataset, (d) HUST dataset. The scales on the color bars of
+panel (c) and (d) indicate the total number of cycles for each battery cell.
 
-2. MIT电池数据集
-- 长期老化测试数据
-- 涵盖多种充放电协议
-- 用于评估模型的长期预测能力
+Four publicly available lithium-ion battery datasets have been placed in the `Data/` folder.
 
-3. TJU电池数据集
-- 不同温度条件下的电池数据
-- 适合研究温度对电池老化的影响
-- 包含批量电池的测试结果
+The XJTU dataset is available at: https://doi.org/10.5281/zenodo.10963339.
 
-4. XJTU电池数据集
-- 高精度测量数据
-- 详细的电池退化过程记录
-- 适用于高精度SOH估计研究
+The TJU dataset is available at: https://zenodo.org/record/6405084.
 
-## 使用方法
+The HUST dataset is available at: https://data.mendeley.com/datasets/nsc7hnsg4s/2.
 
-### 模型训练
-1. 准备数据：确保数据文件位于`Data/`目录下
-2. 配置参数：修改配置文件以调整模型超参数
-3. 运行训练脚本：(以XJTU数据集为例)
-    ```bash
-    # 使用超参数搜索
-    python main_our_models_optimize_XJTU.py
-    # 未使用超参数搜索
-    python main_comparision_XJTU.py
-    ```
+The MIT dataset is available at: https://data.matr.io/1/projects/5c48dd2bc625d700019f3204.
 
-### 结果分析
-- 运行分析脚本以生成性能指标：
-    ```bash
-    python results_analysis_code/Model_optimize_XJTU_results.py
-    python results_analysis_code/Model_optimize_XJTU_results_group_mean.py
-    python results_analysis_code/Comparision_results_XJTU.py
-    ```
-- 查看生成的Excel结果文件和可视化图表
+## 5. Usage
 
-### 可视化
-- 使用预定义的可视化脚本来生成图表：
-    ```bash
-    python plotter/Figure_4b_m6.py
-    ```
+### 5.1. Model training and validation
 
-## 实验结果
+#### 5.1.1. Regular and small-sample scenarios
 
-PIKAN在多个电池数据集上表现出色：
+Taking the XJTU dataset as an example, the model training and evaluation process is as follows:
 
-- **RMSE（均方根误差）**：0.5% - 1.5%
-- **MAPE（平均绝对百分比误差）**：0.3% - 1.0%
+```bash
+# Use hyperparameter search
+python main_our_models_optimize_XJTU.py
+# Hyperparameter search is not used
+python main_comparision_XJTU.py
+```
 
-## 可视化
+#### 5.1.2. Zero-shot and few-shot transfer scenarios
 
-本项目提供了丰富的可视化功能：
+All pretrained model parameter files are saved in the `pretrained_models/` folder.
 
-- SOH预测结果对比图
-- 模型训练过程曲线
-- 不同算法的性能比较
-- 误差分布直方图
-- 特征重要性分析图
+```bash
+python main_our_models_fine_tuning.py
+```
 
-所有可视化结果保存在`Figures/`目录下，支持多种格式（SVG、PNG等）。
+### 5.2. Model performance evaluation
 
-## 贡献
+#### 5.2.1. Regular and small-sample scenarios
 
-欢迎社区贡献！如果您想为本项目做出贡献，请遵循以下步骤：
+Taking the XJTU dataset as an example, the result analysis process is as follows:
 
-1. Fork 仓库
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+```bash
+python results_analysis_code/Model_optimize_XJTU_results.py
+python results_analysis_code/Model_optimize_XJTU_results_group_mean.py
+python results_analysis_code/Comparision_results_XJTU.py
+```
 
-## 许可证
+#### 5.2.2. Zero-shot and few-shot transfer scenarios
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件了解详情。
+```bash
+python results_analysis_code/FineTune_results.py
+```
 
-## 致谢
+### 5.3. Model interpretability analysis
 
-感谢所有为本项目做出贡献的研究人员和开发者。特别感谢相关电池数据集的提供者以及PyTorch、KAN等开源项目的开发者。
-        
+All interpretability analysis code is saved in the `Notebooks/` folder. Taking the XJTU dataset as an example, the interpretability analysis process is as follows:
+
+Step 1. Dataset construction
+   - `Notebooks/XJTU_Dataloader.ipynb`
+
+Step 2. Direct symbolizaton
+   - `Notebooks/PIKAN_XJTU_Var2.ipynb`
+  
+Step 3. Prior-guided symbolizatioin
+   - `Notebooks/PIKAN_XJTU_Var2_PDEAutoDiscovery.ipynb`
+
+All images and videos generated by interpretable analysis are saved in the `Images/` and `Videos/` folders, respectively.
+
+### 5.4. Visualization
+
+All visualizations are saved in the `Figures/` folder. Taking Fig. 1(a) in the paper as an example, the visualization process is as follows:
+
+```bash
+python plotter/Figure_1a.py
+```
+
+## 6. Experimental procedures
+
+![experimental framework](Charts\framework.jpg "experimental framework")
+
+The overall experimental procedures for the proposed PIKAN method.
+
+## 7. Acknowledgments
+
+Work & Code is inspired by https://github.com/wang-fujin/PINN4SOH.
+
+## 8. Citation
+
+If you find our work useful in your research, please consider citing:
+
+```latex
+
+```
+
+If you have any problems, contact me via liulei13@ustc.edu.cn.        
