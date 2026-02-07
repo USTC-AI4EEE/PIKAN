@@ -27,8 +27,12 @@ Website: .
     - [5.3. Model interpretability analysis](#53-model-interpretability-analysis)
     - [5.4. Visualization](#54-visualization)
   - [6. Experimental procedures](#6-experimental-procedures)
-  - [7. Acknowledgments](#7-acknowledgments)
-  - [8. Citation](#8-citation)
+  - [7. Main experimental results](#7-main-experimental-results)
+    - [7.1. Results of regular experiments on four datasets](#71-results-of-regular-experiments-on-four-datasets)
+    - [7.2. Results of small-sample experiments on the XJTU dataset batch 1 and HUST dataset](#72-results-of-small-sample-experiments-on-the-xjtu-dataset-batch-1-and-hust-dataset)
+    - [7.3. The architecture details of proposed PIKAN model and other baseline models](#73-the-architecture-details-of-proposed-pikan-model-and-other-baseline-models)
+  - [8. Acknowledgments](#7-acknowledgments)
+  - [9. Citation](#8-citation)
 
 ## 1. Abstract
 
@@ -140,11 +144,107 @@ python plotter/Figure_1a.py
 
 The overall experimental procedures for the proposed PIKAN method.
 
-## 7. Acknowledgments
+## 7. Main experimental results
+
+### 7.1. Results of regular experiments on four datasets.
+
+| Dataset      |      | XJTU   |        |        |        |        |        | TJU    |        |        | MIT    | HUST   |
+|--------------|------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Batch        |      | 1      | 2      | 3      | 4      | 5      | 6      | 1      | 2      | 3      | —      | —      |
+| PIKAN (ours) | MAPE | 0.0031 | 0.0089 | 0.0067 | 0.0057 | 0.0085 | 0.0045 | 0.0088 | 0.0118 | 0.0054 | 0.0060 | 0.0057 |
+|              | RMSE | 0.0040 | 0.0096 | 0.0082 | 0.0070 | 0.0102 | 0.0068 | 0.0097 | 0.0120 | 0.0051 | 0.0069 | 0.0066 |
+| PIKAN (medium)    | MAPE | 0.0032 | 0.0085 | 0.0066 | 0.0050 | 0.0077 | 0.0043 | 0.0096 | 0.0128 | 0.0057 | 0.0059 | 0.0060 |
+|              | RMSE | 0.0039 | 0.0093 | 0.0080 | 0.0059 | 0.0093 | 0.0066 | 0.0104 | 0.0127 | 0.0054 | 0.0067 | 0.0069 |
+| KAN          | MAPE | 0.0041 | 0.0126 | 0.0081 | 0.0064 | 0.0157 | 0.0062 | 0.0103 | 0.0145 | 0.0057 | 0.0060 | 0.0064 |
+|              | RMSE | 0.0051 | 0.0128 | 0.0095 | 0.0090 | 0.0177 | 0.0079 | 0.0112 | 0.0150 | 0.0053 | 0.0071 | 0.0078 |
+| KAN (medium) | MAPE | 0.0109 | 0.0119 | 0.0090 | 0.0070 | 0.0112 | 0.0056 | 0.0105 | 0.0155 | 0.0060 | 0.0061 | 0.0072 |
+|              | RMSE | 0.0123 | 0.0126 | 0.0107 | 0.0097 | 0.0134 | 0.0074 | 0.0112 | 0.0157 | 0.0056 | 0.0071 | 0.0085 |
+| PINN         | MAPE | 0.0060 | 0.0105 | 0.0066 | 0.0074 | 0.0083 | 0.0066 | 0.0106 | 0.0141 | 0.0080 | 0.0067 | 0.0078 |
+|              | RMSE | 0.0087 | 0.0115 | 0.0080 | 0.0110 | 0.0104 | 0.0099 | 0.0118 | 0.0136 | 0.0076 | 0.0076 | 0.0089 |
+| Transformer  | MAPE | 0.0141 | 0.0161 | 0.0133 | 0.0134 | 0.0136 | 0.0165 | 0.0295 | 0.0309 | 0.0167 | 0.0173 | 0.0310 |
+|              | RMSE | 0.0164 | 0.0177 | 0.0161 | 0.0171 | 0.0167 | 0.0212 | 0.0292 | 0.0309 | 0.0160 | 0.0216 | 0.0404 |
+| MLP          | MAPE | 0.0232 | 0.0233 | 0.0195 | 0.0211 | 0.0183 | 0.0183 | 0.0130 | 0.0166 | 0.0142 | 0.0079 | 0.0080 |
+|              | RMSE | 0.0254 | 0.0269 | 0.0217 | 0.0238 | 0.0219 | 0.0216 | 0.0135 | 0.0159 | 0.0136 | 0.0088 | 0.0089 |
+| CNN          | MAPE | 0.0281 | 0.0322 | 0.0211 | 0.0184 | 0.0339 | 0.0181 | 0.0136 | 0.0181 | 0.0129 | 0.0064 | 0.0073 |
+|              | RMSE | 0.0343 | 0.0382 | 0.0255 | 0.0226 | 0.0446 | 0.0232 | 0.0144 | 0.0189 | 0.0129 | 0.0075 | 0.0087 |
+
+### 7.2. Results of small-sample experiments on the XJTU dataset batch 1 and HUST dataset.
+
+| Dataset         |      | XJTU   |        |        |        | HUST   |        |        |        |
+|-----------------|------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Train batteries |      | 1      | 2      | 3      | 4      | 1      | 2      | 3      | 4      |
+| PIKAN (ours)    | MAPE | 0.0030 | 0.0038 | 0.0033 | 0.0032 | 0.0115 | 0.0108 | 0.0101 | 0.0095 |
+|                 | RMSE | 0.0040 | 0.0048 | 0.0045 | 0.0041 | 0.0124 | 0.0116 | 0.0112 | 0.0104 |
+| PIKAN (medium)  | MAPE | 0.0040 | 0.0034 | 0.0033 | 0.0033 | 0.0180 | 0.0110 | 0.0097 | 0.0088 |
+|                 | RMSE | 0.0051 | 0.0045 | 0.0042 | 0.0040 | 0.0234 | 0.0117 | 0.0107 | 0.0098 |
+| KAN             | MAPE | 0.0044 | 0.0050 | 0.0039 | 0.0043 | 0.0417 | 0.0123 | 0.0133 | 0.0124 |
+|                 | RMSE | 0.0058 | 0.0071 | 0.0052 | 0.0056 | 0.0480 | 0.0134 | 0.0157 | 0.0142 |
+| KAN (medium)    | MAPE | 0.0258 | 0.0160 | 0.0081 | 0.0075 | 0.1100 | 0.0143 | 0.0135 | 0.0128 |
+|                 | RMSE | 0.0272 | 0.0174 | 0.0094 | 0.0089 | 0.1208 | 0.0159 | 0.0156 | 0.0147 |
+| PINN            | MAPE | 0.0068 | 0.0069 | 0.0058 | 0.0051 | 0.0280 | 0.0131 | 0.0141 | 0.0142 |
+|                 | RMSE | 0.0083 | 0.0093 | 0.0080 | 0.0072 | 0.0339 | 0.0153 | 0.0159 | 0.0159 |
+| Transformer     | MAPE | 0.0185 | 0.0158 | 0.0151 | 0.0133 | 0.0392 | 0.0347 | 0.0369 | 0.0373 |
+|                 | RMSE | 0.0216 | 0.0181 | 0.0174 | 0.0158 | 0.0492 | 0.0442 | 0.0475 | 0.0472 |
+| MLP             | MAPE | 0.0223 | 0.0208 | 0.0174 | 0.0098 | 0.1949 | 0.0154 | 0.0134 | 0.0136 |
+|                 | RMSE | 0.0250 | 0.0234 | 0.0186 | 0.0124 | 0.0945 | 0.0187 | 0.0153 | 0.0156 |
+| CNN             | MAPE | 0.0720 | 0.0461 | 0.0353 | 0.0210 | 0.4785 | 0.0395 | 0.0288 | 0.0239 |
+|                 | RMSE | 0.0773 | 0.0541 | 0.0418 | 0.0256 | 0.2350 | 0.0475 | 0.0354 | 0.0290 |
+
+### 7.3. The architecture details of proposed PIKAN model and other baseline models.
+
+| Model          | Module | Layer             | Input size | Output size | Number of parameters |
+|----------------|--------|-------------------|------------|-------------|----------------------|
+| PIKAN (ours)   | SHEM   | KAN Linear        | 17         | 60          | 75960                |
+|                |        | KAN Linear        | 60         | 60          |                      |
+|                |        | KAN Linear        | 60         | 32          |                      |
+|                |        | KAN Linear        | 32         | 32          |                      |
+|                |        | KAN Linear        | 32         | 1           |                      |
+|                | DDMM   | KAN Linear        | 34         | 60          | 57000                |
+|                |        | KAN Linear        | 60         | 60          |                      |
+|                |        | KAN Linear        | 60         | 1           |                      |
+| PIKAN (medium) | SHEM   | KAN Linear        | 17         | 34          | 6120                 |
+|                |        | KAN Linear        | 34         | 1           |                      |
+|                | DDMM   | KAN Linear        | 34         | 17          | 8840                 |
+|                |        | KAN Linear        | 17         | 17          |                      |
+|                |        | KAN Linear        | 17         | 1           |                      |
+| PINN           | SHEM   | Linear + Sin      | 17         | 60          | 7781                 |
+|                |        | Linear + Sin      | 60         | 60          |                      |
+|                |        | Linear            | 60         | 32          |                      |
+|                |        | Linear + Sin      | 32         | 32          |                      |
+|                |        | Linear            | 32         | 1           |                      |
+|                | DDMM   | Linear + Sin      | 34         | 60          | 5821                 |
+|                |        | Linear + Sin      | 60         | 60          |                      |
+|                |        | Linear            | 60         | 1           |                      |
+| KAN            | —      | KAN Linear        | 17         | 60          | 75960                |
+|                |        | KAN Linear        | 60         | 60          |                      |
+|                |        | KAN Linear        | 60         | 32          |                      |
+|                |        | KAN Linear        | 32         | 32          |                      |
+|                |        | KAN Linear        | 32         | 1           |                      |
+| KAN (medium)   | —      | KAN Linear        | 17         | 34          | 6120                 |
+|                |        | KAN Linear        | 34         | 1           |                      |
+| MLP            | —      | Linear + Sin      | 17         | 60          | 7781                 |
+|                |        | Linear + Sin      | 60         | 60          |                      |
+|                |        | Linear            | 60         | 32          |                      |
+|                |        | Linear + Sin      | 32         | 32          |                      |
+|                |        | Linear            | 32         | 1           |                      |
+| CNN            | —      | ResBlock          | (1, 17)    | (8, 17)     | 8465                 |
+|                |        | ResBlock          | (8, 17)    | (16, 9)     |                      |
+|                |        | ResBlock          | (16, 9)    | (24, 5)     |                      |
+|                |        | ResBlock          | (24, 5)    | (16, 5)     |                      |
+|                |        | ResBlock          | (16, 5)    | (8, 5)      |                      |
+|                |        | Linear            | 8*5        | 1           |                      |
+| Transformer    | —      | Linear            | (17, 1)    | (17, 32)    | 12801                |
+|                |        | 1 Encoder layer   | (17, 32)   | (17, 32)    |                      |
+|                |        | AdaptiveAvgPool1d | (32, 17)   | (32, 1)     |                      |
+|                |        | Linear            | 32*1       | 1           |                      |
+
+Note: PIKAN (ours) has the same number of layers and neurons as PINN, but its number of parameters is far greater than that of PINN. KAN has the same number of layers and neurons as MLP, but its number of parameters is far greater than that of MLP. PIKAN (medium) denotes the medium version of the PIKAN model, corresponding to the PIKAN_hgs model in the code, which maitains the same order of magnitude as PINN in terms of the number of parameters. KAN (medium) denotes the medium version of the KAN model, corresponding to the KAN_medium model in the code, which maitains the same order of magnitude as MLP in terms of the number of parameters.
+
+## 8. Acknowledgments
 
 Work & Code is inspired by https://github.com/wang-fujin/PINN4SOH.
 
-## 8. Citation
+## 9. Citation
 
 If you find our work useful in your research, please consider citing:
 
