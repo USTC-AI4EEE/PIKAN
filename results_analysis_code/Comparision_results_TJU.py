@@ -217,7 +217,7 @@ class Results:
 
 if __name__ == '__main__':
     # TJU soh-estimation
-    for model in ['Transformer']: # 'MLP','CNN','KAN','KAN_small','Transformer'
+    for model in ['Transformer']: # 'MLP','CNN','KAN','KAN_small','Transformer','KAN_medium'
         if not os.path.exists(f'results_soh-estimation/processed_results/{model}/'):
             os.makedirs(f'results_soh-estimation/processed_results/{model}/')
         root = f'results_soh-estimation/{model}/TJU-{model} results/'
@@ -232,7 +232,7 @@ if __name__ == '__main__':
         writer._save()
     
     # # TJU small-sample
-    for model in ['Transformer']: # 'MLP','CNN','KAN','KAN_small','Transformer'
+    for model in ['Transformer']: # 'MLP','CNN','KAN','KAN_small','Transformer','KAN_medium'
         if not os.path.exists(f'results_small-sample/processed_results/{model}/'):
             os.makedirs(f'results_small-sample/processed_results/{model}/')
         for n in [1,2]:
