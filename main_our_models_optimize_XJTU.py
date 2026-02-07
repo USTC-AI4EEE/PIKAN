@@ -2,7 +2,7 @@ from dataloader.dataloader import XJTUdata
 from Model.PIKAN_opt import PIKAN_opt
 from Model.PINN_opt import PINN_opt
 from Model.PIKAN_small import PIKAN_small
-from Model.PIKAN_hgs import PIKAN_hgs
+from Model.PIKAN_medium import PIKAN_medium
 import argparse
 import os
 import numpy as np
@@ -40,8 +40,8 @@ def load_model(args):
         model = PIKAN_opt(args)
     elif args.model_name == 'PIKAN_small':
         model = PIKAN_small(args)
-    elif args.model_name == 'PIKAN_hgs':
-        model = PIKAN_hgs(args)
+    elif args.model_name == 'PIKAN_medium':
+        model = PIKAN_medium(args)
     return model
 
 
@@ -103,7 +103,7 @@ def main_2():
 
 def main():
     args = get_args()
-    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_medium
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
     for i in range(5,6):
         batch = batchs[i]
@@ -159,7 +159,7 @@ def main():
 
 def small_sample():
     args = get_args()
-    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_medium
     batchs = ['2C', '3C', 'R2.5', 'R3', 'RW', 'satellite']
     for n in [1,2,3,4]:
         for i in [0]:
@@ -217,7 +217,7 @@ def small_sample():
 
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for XJTU dataset')
-    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_hgs'])
+    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_medium'])
     parser.add_argument('--data', type=str, default='XJTU', help='XJTU, HUST, MIT, TJU')
     parser.add_argument('--train_batch', type=int, default=0, choices=[-1,0,1,2,3,4,5],
                         help='如果是-1，读取全部数据，并随机划分训练集和测试集;否则，读取对应的batch数据'

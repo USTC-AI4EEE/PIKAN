@@ -43,9 +43,9 @@ class LR_Scheduler(object): # 用于调整优化器的学习率
     def get_lr(self):
         return self.current_lr
 
-class PIKAN_hgs(nn.Module): # 网格搜索优化损失函数的权重，总参数量与PINN模型相当，输入神经元数量为17
+class PIKAN_medium(nn.Module): # 网格搜索优化损失函数的权重，总参数量与PINN模型相当，输入神经元数量为17
     def __init__(self,args):
-        super(PIKAN_hgs, self).__init__()
+        super(PIKAN_medium, self).__init__()
         self.args = args
         if args.save_folder is not None and not os.path.exists(args.save_folder):   # 保存传入的参数
             os.makedirs(args.save_folder)
@@ -263,7 +263,7 @@ if __name__ == "__main__":
 
 
     args = get_args()
-    pikan = PIKAN_hgs(args)
+    pikan = PIKAN_medium(args)
     print(pikan.solution_u)
     count_parameters(pikan.solution_u)
     print(pikan.dynamical_F)

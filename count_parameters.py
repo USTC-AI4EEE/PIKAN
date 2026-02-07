@@ -1,6 +1,6 @@
 from Model.PINN_opt import PINN_opt
 from Model.PIKAN_opt import PIKAN_opt
-from Model.PIKAN_hgs import PIKAN_hgs
+from Model.PIKAN_medium import PIKAN_medium
 from Model.PIKAN_small import PIKAN_small
 from Model.Compare_Models import MLP,CNN,kan,KAN_small,Transformer,KAN_medium
 import argparse
@@ -40,7 +40,7 @@ def get_args():
 
 if __name__ == '__main__':
     args = get_args()
-    
+
     mlp = MLP()
     cnn = CNN()
     kan_small = KAN_small()
@@ -64,10 +64,10 @@ if __name__ == '__main__':
     print('pinn:')
     count_parameters(pinn.solution_u)
     count_parameters(pinn.dynamical_F)
-    pikan_hgs = PIKAN_hgs(args)
+    PIKAN_medium = PIKAN_medium(args)
     print('pikan_medium:')
-    count_parameters(pikan_hgs.solution_u)
-    count_parameters(pikan_hgs.dynamical_F)
+    count_parameters(PIKAN_medium.solution_u)
+    count_parameters(PIKAN_medium.dynamical_F)
     pikan_s = PIKAN_small(args)
     print('pikan_small:')
     count_parameters(pikan_s.solution_u)

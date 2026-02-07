@@ -1,7 +1,7 @@
 from dataloader.dataloader import TJUdata
 from Model.PIKAN_opt import PIKAN_opt
 from Model.PINN_opt import PINN_opt
-from Model.PIKAN_hgs import PIKAN_hgs
+from Model.PIKAN_medium import PIKAN_medium
 from Model.PIKAN_small import PIKAN_small
 import argparse
 import os
@@ -98,8 +98,8 @@ def load_model(args):
         model = PIKAN_opt(args)
     elif args.model_name == 'PIKAN_small':
         model = PIKAN_small(args)
-    elif args.model_name == 'PIKAN_hgs':
-        model = PIKAN_hgs(args)
+    elif args.model_name == 'PIKAN_medium':
+        model = PIKAN_medium(args)
     return model
 
 
@@ -165,7 +165,7 @@ def main_2():
 
 def main():
     args = get_args()
-    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_medium
     batchs = [0,1,2]       
     for batch in batchs:
         setattr(args, 'in_same_batch', True)
@@ -225,7 +225,7 @@ def main():
 
 def small_sample():
     args = get_args()
-    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_medium
     batchs = [0,1,2]
     for n in [1,2]:
         for i in [2]:
@@ -283,7 +283,7 @@ def small_sample():
 
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for TJU dataset')
-    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_hgs'])
+    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_medium'])
     parser.add_argument('--data', type=str, default='TJU', help='XJTU, HUST, MIT, TJU')
     parser.add_argument('--in_same_batch', type=bool, default=True, help='训练集和测试集是否在同一个batch中(whether train and test sets are in the same batch)')
     parser.add_argument('--train_batch', type=int, default=-1, choices=[-1,0,1,2],

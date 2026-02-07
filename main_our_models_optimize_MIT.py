@@ -2,7 +2,7 @@ from dataloader.dataloader import MITdata
 from Model.PIKAN_opt import PIKAN_opt
 from Model.PINN_opt import PINN_opt
 from Model.PIKAN_small import PIKAN_small
-from Model.PIKAN_hgs import PIKAN_hgs
+from Model.PIKAN_medium import PIKAN_medium
 import argparse
 import os
 import numpy as np
@@ -40,8 +40,8 @@ def load_model(args):
         model = PIKAN_opt(args)
     elif args.model_name == 'PIKAN_small':
         model = PIKAN_small(args)
-    elif args.model_name == 'PIKAN_hgs':
-        model = PIKAN_hgs(args)
+    elif args.model_name == 'PIKAN_medium':
+        model = PIKAN_medium(args)
     return model
 
 
@@ -97,7 +97,7 @@ def main_2():
 
 def main():
     args = get_args()
-    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_medium
     for e in range(10):
         set_seed(e)         
         best_MAPE = float('inf')  # 初始化当前i和e下的最佳MAPE为正无穷
@@ -147,7 +147,7 @@ def main():
 
 def small_sample():
     args = get_args()
-    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_hgs
+    setattr(args,'model_name','PIKAN_opt') # 可运行PIKAN_opt, PINN_opt, PIKAN_medium
     for n in [1,2]:
         setattr(args,'batch_size',128)
         for e in range(10):
@@ -201,7 +201,7 @@ def small_sample():
 
 def get_args():
     parser = argparse.ArgumentParser('Hyper Parameters for MIT dataset')
-    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_hgs'])
+    parser.add_argument('--model_name',type=str,default='PIKAN_opt',choices=['PINN_opt','PIKAN_small','PIKAN_medium'])
     parser.add_argument('--data', type=str, default='MIT', help='XJTU, HUST, MIT, TJU')
     parser.add_argument('--batch_size', type=int, default=512, help='batch size')
     parser.add_argument('--normalization_method', type=str, default='min-max', help='min-max,z-score')

@@ -232,7 +232,7 @@ class Results:
 
 if __name__ == '__main__':
 
-    model_name = 'PIKAN_opt' # PIKAN_opt or PIKAN_hgs or PINN_opt or PIKAN_small
+    model_name = 'PIKAN_opt' # PIKAN_opt or PIKAN_medium or PINN_opt or PIKAN_small
 
     # TJU soh-estimation
     root = f'results_soh-estimation/{model_name}/TJU results/'

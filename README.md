@@ -28,11 +28,11 @@ Website: .
     - [5.4. Visualization](#54-visualization)
   - [6. Experimental procedures](#6-experimental-procedures)
   - [7. Main experimental results](#7-main-experimental-results)
-    - [7.1. Results of regular experiments on four datasets](#71-results-of-regular-experiments-on-four-datasets)
-    - [7.2. Results of small-sample experiments on the XJTU dataset batch 1 and HUST dataset](#72-results-of-small-sample-experiments-on-the-xjtu-dataset-batch-1-and-hust-dataset)
-    - [7.3. The architecture details of proposed PIKAN model and other baseline models](#73-the-architecture-details-of-proposed-pikan-model-and-other-baseline-models)
-  - [8. Acknowledgments](#7-acknowledgments)
-  - [9. Citation](#8-citation)
+    - [7.1. Results of regular experiments on four datasets.](#71-results-of-regular-experiments-on-four-datasets)
+    - [7.2. Results of small-sample experiments on the XJTU dataset batch 1 and HUST dataset.](#72-results-of-small-sample-experiments-on-the-xjtu-dataset-batch-1-and-hust-dataset)
+    - [7.3. The architecture details of proposed PIKAN model and other baseline models.](#73-the-architecture-details-of-proposed-pikan-model-and-other-baseline-models)
+  - [8. Acknowledgments](#8-acknowledgments)
+  - [9. Citation](#9-citation)
 
 ## 1. Abstract
 
@@ -238,7 +238,7 @@ The overall experimental procedures for the proposed PIKAN method.
 |                |        | AdaptiveAvgPool1d | (32, 17)   | (32, 1)     |                      |
 |                |        | Linear            | 32*1       | 1           |                      |
 
-Note: PIKAN (ours) has the same number of layers and neurons as PINN, but its number of parameters is far greater than that of PINN. KAN has the same number of layers and neurons as MLP, but its number of parameters is far greater than that of MLP. PIKAN (medium) denotes the medium version of the PIKAN model, corresponding to the PIKAN_hgs model in the code, which maitains the same order of magnitude as PINN in terms of the number of parameters. KAN (medium) denotes the medium version of the KAN model, corresponding to the KAN_medium model in the code, which maitains the same order of magnitude as MLP in terms of the number of parameters.
+Note: PIKAN (ours) has the same number of layers and neurons as PINN, but its number of parameters is far greater than that of PINN. KAN has the same number of layers and neurons as MLP, but its number of parameters is far greater than that of MLP. PIKAN (medium) denotes the medium version of the PIKAN model, corresponding to the PIKAN_medium model in the code, which maitains the same order of magnitude as PINN in terms of the number of parameters. KAN (medium) denotes the medium version of the KAN model, corresponding to the KAN_medium model in the code, which maitains the same order of magnitude as MLP in terms of the number of parameters.
 
 ## 8. Acknowledgments
 
