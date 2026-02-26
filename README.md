@@ -1,8 +1,6 @@
 # Physics-informed and interpretable state of health estimation framework for lithium-ion batteries
 
-> **Authors:**
-
-Lei Liu, Jiahui Huang, Bo Peng, Ying Li, Peng Wang, Xianhao Wang, Hongwei Zhao, Bin Li.
+> **Authors:** Lei Liu, Jiahui Huang, Bo Peng, Ying Li, Peng Wang, Xianhao Wang, Hongwei Zhao, Bin Li.
 
 This repo contains the code and data from our paper published in Journal of Energy Storage.
 
