@@ -6,7 +6,7 @@ Lei Liu, Jiahui Huang, Bo Peng, Ying Li, Peng Wang, Xianhao Wang, Hongwei Zhao, 
 
 This repo contains the code and data from our paper published in Journal of Energy Storage.
 
-Website: .
+Website: https://www.sciencedirect.com/science/article/pii/S2352152X26005244 .
 
 ## Table of contents
 
