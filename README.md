@@ -4,7 +4,7 @@
 
 This repo contains the code and data from our paper published in Journal of Energy Storage.
 
-Website: https://www.sciencedirect.com/science/article/pii/S2352152X26005244 .
+Website: https://www.sciencedirect.com/science/article/pii/S2352152X26005244.
 
 ## Table of contents
 
